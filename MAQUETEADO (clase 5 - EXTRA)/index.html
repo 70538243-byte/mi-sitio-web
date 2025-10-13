@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Site Optimizado</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="#inicio" class="logo">MiMiniSite</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a Mi Mini Site</h1>
+      <p>Aprendiendo HTML, CSS y diseño web paso a paso</p>
+      <a href="#servicios" class="btn">Descubre Más</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nosotros</h2>
+    <div class="contenido-sobre">
+      <div class="texto">
+        <h3>Quiénes Somos</h3>
+        <p>Somos un equipo apasionado por el <span class="resaltado">diseño web</span> y la innovación tecnológica. Nuestro objetivo es crear sitios web modernos, responsivos y atractivos.</p>
+        <p>Utilizamos herramientas modernas como <strong>Flexbox</strong>, Google Fonts, iconos web y técnicas de accesibilidad para ofrecer la mejor experiencia al usuario.</p>
+      </div>
+      <div class="imagen">
+        <img src="wallpaper.jpg" alt="Diseño Web">
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="servicios">
+    <h2>Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-laptop-code fa-3x"></i>
+        <h3>Desarrollo Web</h3>
+        <p>Creación de sitios web modernos y responsivos adaptados a cualquier dispositivo.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-paint-brush fa-3x"></i>
+        <h3>Diseño Gráfico</h3>
+        <p>Diseños visuales atractivos usando paletas de colores, tipografía y creatividad.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-search fa-3x"></i>
+        <h3>SEO & Marketing</h3>
+        <p>Optimización de sitios web para mejorar la visibilidad en buscadores y redes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Tu nombre">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Tu email">
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 MiMiniSite. Todos los derechos reservados.</p>
+  <div class="redes">
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* ========================= 
+Variables CSS
+========================= */
+
+
+/* ¿Cuando se usa root? :root selecciona el elemento raíz del documento, es decir <html>.
+Dentro de él, defines variables que empiezan con --.
+Luego puedes usar esas variables en cualquier parte del CSS con var(--nombre-variable).
+
+Ventajas de usar :root:
+Centralizas los valores de colores, fuentes o tamaños → más fácil de cambiar.
+Aseguras consistencia en todo el diseño.
+Facilita la creación de temas (claro/oscuro, por ejemplo).  */
+
+:root {
+  --color-principal: #4a90e2;
+  --color-secundario: #f2f2f2;
+  --color-texto: #333;
+  --color-resaltado: #e94e77;
+  --fuente-principal: 'Roboto', sans-serif;
+  --fuente-titulos: 'Playfair Display', serif;
+}
+
+/* =========================
+Reset básico
+========================= */
+
+/* ¿Por qué se usa margin 0 y padding 0?
+Porque los navegadores traen estilos por defecto (por ejemplo, los párrafos <p> tienen margen automático).
+Con esto, partes de una base "limpia" y controlas tú los márgenes y rellenos.
+El box-sizing: border-box facilita los cálculos de ancho y alto: el tamaño del elemento ya incluye padding y border, evitando que se desborde. */
+
+* {
+  margin: 0;          /* Quita todos los márgenes por defecto */
+  padding: 0;         /* Quita todos los rellenos por defecto */
+  box-sizing: border-box; /* Hace que el ancho/alto de los elementos incluya el borde y el padding */
+}
+
+
+body {
+  font-family: var(--fuente-principal); /* Fuente base de todo el documento */
+  color: var(--color-texto);           /* Color del texto por defecto */
+  line-height: 1.6;                    /* Mejora la legibilidad del texto. Altura de línea = mejora la legibilidad */
+  height: 100%;                        /* Hace que el <body> ocupe toda la altura de la ventana */
+}
+
+/* height: 100% = “el alto de este elemento será igual al 100% del alto de su contenedor padre”.
+En el caso del <body>, si el <html> mide el 100% de la ventana, entonces el body también ocupará toda la pantalla.
+Ojo: para que funcione, el elemento padre (html) también debe tener altura definida, normalmente html, body { height: 100%; }. */
+
+
+
+/* =========================
+Navbar
+========================= */
+.navbar {
+  display: flex;                 /* Activa flexbox */
+  justify-content: space-between;/* Separa elementos: uno a la izquierda y otro a la derecha */
+  align-items: center;           /* Centra verticalmente */
+  padding: 16px 32px;            /* Espaciado interno (arriba/abajo 16px, lados 32px) */
+  background-color: var(--color-principal); /* Fondo de color principal */
+}
+
+.logo {
+  font-family: var(--fuente-titulos); /* Fuente especial para el logo/título */
+  font-size: 28px;                   /* Tamaño del texto */
+  font-weight: bold;                 /* Texto en negrita */
+  color: white;                      /* Color blanco */
+  text-decoration: none;             /* Quita el subrayado (si es un enlace) */
+}
+
+.nav-links {
+  list-style: none; /* Quita los puntos de la lista */
+  display: flex;    /* Alinea los ítems en fila */
+  gap: 16px;        /* Espacio entre cada ítem */
+}
+
+.nav-links li a {
+  color: white;           /* Texto blanco */
+  text-decoration: none;  /* Quita el subrayado del enlace */
+  padding: 8px;           /* Espacio interno alrededor del texto */
+}
+
+.nav-links li a:hover {
+  color: var(--color-resaltado); /* Cambia el color del enlace al pasar el mouse */
+}
+
+/* =========================
+Hero
+========================= */
+
+/*¿Por qué usa doble RGBA (rgba(0,0,0,0.5), rgba(0,0,0,0.5)), ?
+El doble rgba se usa porque el linear-gradient necesita dos colores de inicio y fin.
+Aquí ambos son el mismo color negro semi-transparente (rgba(0,0,0,0.5)).
+Eso genera un degradado uniforme (parece un “filtro” oscuro) que se coloca encima de la imagen.
+- Si se usaran dos valores distintos, el gradiente pasaría de un color a otro.
+- Usar el mismo color arriba y abajo crea un “velo” semitransparente constante. */
+
+.hero {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('wallpaper.jpg') center/cover no-repeat; /* imagen de fondo */
+  
+  height: 80%;        /* cambio: porcentaje en lugar de vh */
+  min-height: 500px;  /* asegura que no quede muy pequeño */
+  
+ display: flex;          /* Activa flexbox */
+justify-content: center;/* Centra horizontalmente */
+align-items: center;    /* Centra verticalmente */
+text-align: center;     /* Centra el texto dentro del contenedor */
+color: white;           /* Texto en blanco */
+padding: 16px;          /* Espacio interno alrededor */
+}
+
+.hero h1 {
+font-family: var(--fuente-titulos); /* Usa la fuente definida para títulos */
+font-size: 48px;                   /* Texto grande */
+margin-bottom: 16px;               /* Espacio debajo del elemento */
+}
+
+.hero p {
+  font-size: 19px; /* antes 1.2rem */
+margin-bottom: 24px; /* Espacio de 24px debajo del elemento */
+}
+
+.btn {
+ background-color: var(--color-resaltado); /* Fondo con color de acento */
+color: white;                             /* Texto en blanco */
+padding: 13px 24px;                       /* Espaciado interno (arriba/abajo 13px, lados 24px) */
+border-radius: 8px;                       /* Bordes redondeados */
+text-decoration: none;                    /* Quita el subrayado (si es enlace) */
+display: inline-block;                    /* Se comporta como bloque en línea (permite ancho/alto) */
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--color-resaltado);
+}
+
+/* =========================
+Sección Sobre
+========================= */
+.sobre {
+  padding: 80px 32px; /* Espacio interno grande: 80px arriba/abajo y 32px a los lados */
+  background-color: var(--color-secundario);
+  text-align: center;
+}
+
+.sobre h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 35px; /* antes 2.2rem */
+  margin-bottom: 32px; /* antes 2rem */
+}
+
+.sobre h3 {
+  font-size: 24px; /* antes 1.5rem */
+  margin-bottom: 16px; /* antes 1rem */
+}
+
+.contenido-sobre {
+display: flex;         /* Activa flexbox */
+flex-wrap: wrap;       /* Permite que los elementos bajen a otra línea si no caben */
+justify-content: center; /* Centra los elementos horizontalmente */
+gap: 32px;             /* Espacio entre los elementos */
+max-width: 1000px;     /* Ancho máximo del contenedor */
+margin: 0 auto;        /* Centra el contenedor horizontalmente */
+}
+
+.contenido-sobre .texto,
+.contenido-sobre .imagen {
+flex: 1 1 300px; /* El ítem crece, se encoge y tiene base de 300px */
+max-width: 550px; /* No puede ser más ancho que 550px */
+padding: 10px;    /* Espacio interno alrededor del contenido */
+}
+
+.contenido-sobre img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.contenido-sobre .texto p {
+  text-align: justify; /* texto justificado */
+  margin-bottom: 16px; /* separación entre párrafos */
+}
+
+.resaltado {
+  color: var(--color-resaltado);
+  font-weight: bold;
+}
+
+/* =========================
+Sección Servicios
+========================= */
+.servicios {
+  padding: 80px 32px; /* antes 5rem 2rem */
+  text-align: center;
+}
+
+.servicios h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 35px; /* antes 2.2rem */
+  margin-bottom: 32px; /* antes 2rem */
+}
+
+.cards {
+  display: flex;   /* Activa flexbox para organizar los hijos en fila */
+  flex-wrap: wrap; /* Si no caben en una fila, los hijos bajan a la siguiente */
+  justify-content: center;
+  gap: 32px; /* antes 2rem */
+}
+
+.card {
+  background: white;
+  padding: 32px; /* antes 2rem */
+  border-radius: 12px;
+  flex: 1 1 250px;
+  max-width: 300px;  /*  Propiedad que fija el ancho máximo de un elemento: puede reducirse si el espacio es menor, pero nunca superar ese valor.*/
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 16px; /* antes 1rem */
+  margin-bottom: 8px; /* antes 0.5rem */
+}
+
+/* =========================
+Sección Contacto
+========================= */
+.contacto {
+  padding: 80px 32px; /* antes 5rem 2rem */
+  background-color: var(--color-secundario);
+  text-align: center;
+}
+
+.contacto h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 35px; /* antes 2.2rem */
+  margin-bottom: 32px; /* antes 2rem */
+}
+
+.contacto form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* antes 1rem */
+}
+
+.contacto input,
+.contacto textarea,
+.contacto button {
+  padding: 13px; /* antes 0.8rem */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contacto button {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contacto button:hover {
+  background-color: var(--color-resaltado);
+}
+
+
+/* =========================
+Footer
+========================= */
+
+footer {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 20px 8px; /* más compacto */
+  text-align: center;
+}
+
+footer .redes {
+  margin-top: 6px;
+}
+
+footer .redes a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .redes a:hover {
+  color: var(--color-resaltado);
+}
+
+
+
+/* =========================
+Scroll behavior
+========================= */
+html {
+  scroll-behavior: smooth;
+  height: 100%; /* asegura que % funcione bien */
+}
+
+/* =========================
+Responsive
+========================= */
+@media (max-width: 768px) {
+  .contenido-sobre,
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px; /* antes 1rem */
+  }
+}
