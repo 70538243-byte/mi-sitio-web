@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de Opacidad</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  /* Caja principal */
+  .caja {
+    width: 250px;
+    height: 250px;
+    background-color: #1d3557;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 12px;
+
+    /* Transición para suavizar el cambio de opacidad */
+    transition: opacity 0.5s ease;
+  }
+
+  /* Estado hover */
+  .caja:hover {
+    opacity: 0.5; /* reduce la opacidad al 50% */
+  }
+</style>
+</head>
+<body>
+
+<div class="caja">
+  Pasa el mouse
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Fixed</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .fixed-box {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #264653;
+      color: white;
+      padding: 15px;
+      font-weight: bold;
+      text-align: center;
+      z-index: 999;
+    }
+
+    .container {
+      margin-top: 70px; /* espacio para que no tape el contenido */
+      height: 400px;
+      overflow-y: auto;
+      padding: 10px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      margin: 20px;
+    }
+
+    .content-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Fixed Box Demo</h1>
+  </div>
+
+  <div class="fixed-box">
+    📌 Yo soy fijo y me ves todo el tiempo
+  </div>
+
+  <div class="container">
+    <!-- Cajas de contenido simuladas -->
+    <div class="content-box">Contenido 1</div>
+    <div class="content-box">Contenido 2</div>
+    <div class="content-box">Contenido 3</div>
+    <div class="content-box">Contenido 4</div>
+    <div class="content-box">Contenido 5</div>
+    <div class="content-box">Contenido 6</div>
+    <div class="content-box">Contenido 7</div>
+    <div class="content-box">Contenido 8</div>
+    <div class="content-box">Contenido 9</div>
+    <div class="content-box">Contenido 10</div>
+  </div>
+
+</body>
+</html>

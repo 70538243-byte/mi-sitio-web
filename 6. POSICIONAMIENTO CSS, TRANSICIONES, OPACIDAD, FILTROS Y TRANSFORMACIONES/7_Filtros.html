@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de Filtros CSS</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column;
+  }
+
+  /* Imagen con filtro inicial */
+  .imagen {
+    width: 300px;
+    height: auto;
+    transition: filter 0.5s ease; /* suaviza el cambio de filtro */
+  }
+
+  /* Hover con filtro diferente */
+  .imagen:hover {
+    filter: grayscale(80%) blur(3px) brightness(120%);
+  }
+
+  /* Texto explicativo */
+  p {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<img src="https://via.placeholder.com/300" alt="Ejemplo" class="imagen">
+
+<p>Pasa el mouse sobre la imagen para aplicar filtros CSS</p>
+
+</body>
+</html>

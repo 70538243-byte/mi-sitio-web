@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio Avanzado Sticky</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Header sticky */
+  header {
+    position: sticky; /* Fija el elemento mientras scroll */
+    top: 0; /* Se pega desde el top */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  /* Cambia estilo cuando se pega */
+  header.sticky-active {
+    background-color: rgba(0, 123, 255, 0.9);
+    color: white;
+    padding: 10px;
+    transform: scale(1.05);
+  }
+
+  section {
+    height: 800px;
+    padding: 20px;
+  }
+
+  section:nth-child(even) {
+    background: #f4f4f4;
+  }
+
+</style>
+</head>
+<body>
+
+<header id="myHeader">Menú Sticky Avanzado</header>
+
+<section>
+  <h2>Sección 1</h2>
+  <p>Contenido de la sección 1...</p>
+</section>
+
+<section>
+  <h2>Sección 2</h2>
+  <p>Contenido de la sección 2...</p>
+</section>
+
+<section>
+  <h2>Sección 3</h2>
+  <p>Contenido de la sección 3...</p>
+</section>
+
+<section>
+  <h2>Sección 4</h2>
+  <p>Contenido de la sección 4...</p>
+</section>
+
+<script>
+  const header = document.getElementById("myHeader");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("sticky-active");
+    } else {
+      header.classList.remove("sticky-active");
+    }
+  });
+</script>
+
+</body>
+</html>

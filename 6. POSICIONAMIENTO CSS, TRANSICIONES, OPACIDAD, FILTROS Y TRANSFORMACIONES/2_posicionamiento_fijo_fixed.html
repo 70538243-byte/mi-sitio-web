@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner Fijo Simple</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1d3557;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .banner-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Banner Fijo Simple</h1>
+    <p>Este banner permanece visible al hacer scroll</p>
+  </header>
+
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p style="margin-bottom: 800px;">Contenido extra para permitir scroll...</p>
+  </div>
+
+  <div class="banner-fixed">
+    🔔 ¡Oferta especial!
+  </div>
+
+</body>
+</html>

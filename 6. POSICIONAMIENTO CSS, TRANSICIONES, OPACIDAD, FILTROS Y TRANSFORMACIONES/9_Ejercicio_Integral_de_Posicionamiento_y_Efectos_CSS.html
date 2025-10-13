@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio Integral de Posicionamiento y Efectos CSS</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* ===== POSICIONAMIENTO STICKY =====
+     El header se mantiene visible mientras hacemos scroll */
+  header {
+    position: sticky; /* Sticky */
+    top: 0;
+    background-color: #1d3557;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  /* ===== POSICIONAMIENTO FIJO =====
+     Banner que siempre permanece visible aunque se haga scroll */
+  .banner-fixed {
+    position: fixed; /* Fixed */
+    bottom: 20px;
+    right: 20px;
+    background-color: #e63946;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 1000;
+    /* ===== TRANSICIONES =====
+       Animar opacidad y transformaciones al hacer hover */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .banner-fixed:hover {
+    opacity: 0.7; /* OPACIDAD */
+    transform: scale(1.1); /* TRANSFORMACIONES */
+  }
+
+  /* ===== POSICIONAMIENTO RELATIVO + FUNCION calc() =====
+     Contenedor de pantalla completa con altura dinámica */
+  .contenedor {
+    position: relative; /* Relative */
+    width: 100vw;
+    height: calc(100vh - 80px); /* calc(): altura total menos espacio del header */
+    background: linear-gradient(135deg, #a8dadc, #457b9d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* ===== POSICIONAMIENTO ABSOLUTO =====
+     Caja posicionada respecto al contenedor relativo */
+  .caja-absoluta {
+    position: absolute; /* Absolute */
+    top: 20px;
+    left: 20px;
+    background-color: rgba(244, 162, 97, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    /* ===== TRANSICIONES ===== */
+    transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+  }
+
+  .caja-absoluta:hover {
+    transform: rotate(10deg) scale(1.1); /* TRANSFORMACIONES */
+    filter: grayscale(50%) blur(2px); /* FILTROS */
+    opacity: 0.8; /* OPACIDAD */
+  }
+
+  /* ===== OTRA CAJA ABSOLUTA =====
+     Ejemplo adicional de absolute + transformaciones + filtros + opacidad */
+  .caja-secundaria {
+    position: absolute; /* Absolute */
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(38, 70, 83, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    /* TRANSICIONES */
+    transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+  }
+
+  .caja-secundaria:hover {
+    transform: rotate(-10deg) scale(1.1); /* TRANSFORMACIONES */
+    filter: brightness(150%) contrast(120%); /* FILTROS */
+    opacity: 0.9; /* OPACIDAD */
+  }
+
+  /* CONTENIDO EXTRA PARA DEMOSTRAR SCROLL */
+  .contenido {
+    padding: 20px;
+    background-color: white;
+    height: 2000px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER (Sticky) ===== -->
+<header>
+  <h1>Ejercicio Integral de Posicionamiento y Efectos CSS</h1>
+  <p>Incluye Sticky, Fixed, Absolute, Relative, calc(), Transiciones, Opacidad, Filtros y Transformaciones</p>
+</header>
+
+<!-- ===== CONTENEDOR RELATIVO CON CAJAS ABSOLUTAS ===== -->
+<div class="contenedor">
+  <div class="caja-absoluta">Caja Absoluta</div>
+  <div class="caja-secundaria">Caja Secundaria Absoluta</div>
+</div>
+
+<!-- CONTENIDO EXTRA PARA SCROLL -->
+<div class="contenido">
+  <p>Desplázate hacia abajo para ver el efecto sticky del header y el banner fijo.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper eros in metus laoreet, vitae cursus ligula tincidunt. Suspendisse potenti.</p>
+</div>
+
+<!-- ===== BANNER FIJO ===== -->
+<div class="banner-fixed">
+  🔔 Banner Fijo
+</div>
+
+</body>
+</html>

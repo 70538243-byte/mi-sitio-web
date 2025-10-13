@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menú con position: relative</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+
+  /* Contenedor del menú con posición relativa */
+  .menu {
+    position: relative;
+    background-color: #34495e;
+    padding: 15px 30px;
+    display: flex;
+    gap: 25px;
+  }
+
+  /* Links */
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative; /* para pseudo-elementos o hijos absolutos */
+  }
+
+  /* Ejemplo de submenú posicionado absolutamente respecto a .menu */
+  .menu a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #1abc9c;
+    border-radius: 2px;
+  }
+
+  /* Contenido de la página */
+  .content {
+    padding: 30px;
+    color: #333;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+  <nav class="menu">
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <main class="content">
+    <h1>Ejemplo de menú con position: relative</h1>
+    <p>El menú está posicionado de forma relativa. Esto significa que mantiene su lugar en el flujo normal del documento, pero puedes posicionar elementos hijos absolutamente dentro de él.</p>
+    <p>En este ejemplo, el subrayado verde aparece justo debajo del enlace al hacer hover, usando un pseudo-elemento absolutamente posicionado dentro de cada link.</p>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Posicionamiento Absoluto y Relativo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+    }
+
+    .contenedor {
+      position: relative; /* referencia para el posicionamiento absoluto */
+      width: 100vw; /* ancho completo de la ventana */
+      height: 100vh; /* altura completa de la ventana */
+      background: linear-gradient(135deg, #a8dadc, #457b9d); /* degradado */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    .caja-absoluta {
+      position: absolute; /* posición relativa al contenedor */
+      top: 20px;
+      left: 20px;
+      background-color: #f4a261;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .caja-absoluta2 {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e76f51;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    Contenedor de pantalla completa (posición relativa)
+
+    <div class="caja-absoluta">
+      Caja Absoluta Arriba Izquierda
+    </div>
+
+    <div class="caja-absoluta2">
+      Caja Absoluta Abajo Derecha
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Full Fixed</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    /* 🔵 1. Barra superior fija */
+    .top-bar {
+      position: fixed;     /* Esto la fija arriba */
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0077b6;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    /* 🟢 2. Barra lateral izquierda fija */
+    .sidebar {
+      position: fixed;     /* Fija en el lado izquierdo */
+      top: 60px;           /* Debajo de la barra superior */
+      left: 0;
+      width: 200px;
+      height: calc(100% - 60px);
+      background-color: #023e8a;
+      color: white;
+      padding: 20px;
+      z-index: 900;
+    }
+
+    /* 🟡 3. Contenido que se desplaza (NO es fixed) */
+    .main-content {
+      margin-top: 60px;     /* Para no quedar debajo de la barra superior */
+      margin-left: 220px;   /* Para no quedar debajo de la barra lateral */
+      padding: 20px;
+      height: 2000px;       /* Mucho contenido para permitir scroll */
+      background: #f1f1f1;
+    }
+
+    /* 🔴 4. Botón flotante fijo abajo a la derecha */
+    .floating-button {
+      position: fixed;       /* Fijado en pantalla */
+      bottom: 20px;
+      right: 20px;
+      background-color: #f72585;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      z-index: 1100;
+    }
+
+    .floating-button:hover {
+      background-color: #d61d6d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔵 1. Barra superior -->
+  <div class="top-bar">
+    🔝 Barra Superior Fija (position: fixed)
+  </div>
+
+  <!-- 🟢 2. Barra lateral izquierda -->
+  <div class="sidebar">
+    📌 Menú Lateral Fijo (position: fixed)<br><br>
+    - Inicio<br>
+    - Sobre<br>
+    - Contacto
+  </div>
+
+  <!-- 🟡 3. Contenido desplazable -->
+  <div class="main-content">
+    <h2>Contenido desplazable</h2>
+    <p>Desplázate hacia abajo y verás cómo los elementos fijos (barra superior, menú lateral y botón) se mantienen visibles.</p>
+    <p>Sigue bajando, sigue bajando... 👇👇👇</p>
+    <!-- Agrega más contenido si deseas -->
+  </div>
+
+  <!-- 🔴 4. Botón flotante -->
+  <button class="floating-button" onclick="alert('¿En qué te ayudo?')">
+    ❓ Botón Flotante Fijo (position: fixed)
+  </button>
+
+</body>
+</html>

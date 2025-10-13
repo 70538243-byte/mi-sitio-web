@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Sticky</title>
+  <style>
+
+    body {
+      margin: 0;        /*¿Qué significa   margin: 0?
+                          Significa que todos los márgenes (arriba, abajo, izquierda y derecha) están en 0 píxeles.
+                          En otras palabras, el elemento no tendrá espacio externo alrededor.
+
+                          Porque los navegadores suelen dar márgenes por defecto a ciertos elementos, por ejemplo: El <body> viene con un margin: 8px; automático.
+                          Los títulos <h1>, <h2>, ... tienen márgenes grandes arriba y abajo.
+                          Es una forma de resetear los estilos por defecto del navegador y empezar con un “lienzo limpio” para tener control total del diseño.
+
+                          En resumen:
+                          margin: 0; elimina el espacio externo.
+                          Se usa para evitar que el navegador meta márgenes automáticos que desordenan el diseño. */
+
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      height: 400px;
+      overflow-y: auto; /* overflow-y: auto; significa:
+                        - Si el contenido es más alto que la caja → aparece scroll vertical.
+                        - Si el contenido entra normal → no aparece scroll.
+                          Es como decir: “pon scroll solo si hace falta”. */
+      padding: 10px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      margin: 20px;
+    }
+
+    .sticky-box {
+      position: sticky;  /* position: sticky; significa que un elemento se pega:
+                            Al inicio se comporta como relative (se mueve con el flujo normal).
+                            Pero cuando haces scroll, llega a un punto (por ejemplo, top: 0;) y ahí se queda fijo en la pantalla.
+                            En resumen:
+                            Sticky = se pega mientras bajas, pero solo dentro de su contenedor.
+                            Así, el menú baja contigo hasta que llega al borde superior y luego se queda pegado. 
+                            */
+
+      top: 0;
+      background-color: #e76f51;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      z-index: 1;        /* z-index en CSS sirve para decidir qué elemento va encima y cuál debajo cuando se superponen                   Reglas rápidas:
+                           z-index: 0; → nivel normal.
+                           z-index: 1; o más → más arriba.
+                           z-index: -1; → se va al fondo (detrás de los demás).
+                           Cuanto más grande el número, más arriba está la capa.
+                           Ojo: solo funciona si el elemento tiene position distinto de static (ej: relative, absolute, fixed, sticky).
+                           Es como un montón de hojas: el z-index dice cuál está encima.  
+
+                           z-index usa números para decir quién está arriba o abajo:
+                           z-index: auto; → normal (por defecto).
+                           z-index: -1; → se va al fondo.
+                           z-index: 0; → nivel base.
+                           z-index: 1, 2, 3... → cada vez más arriba. */
+    }
+
+    .content-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Sticky Box Demo</h1>
+  </div>
+
+  <div class="container">
+    <div class="sticky-box">
+      🔥 Yo soy sticky dentro de este contenedor
+    </div>
+
+    <!-- Cajas de contenido simuladas -->
+    <div class="content-box">Contenido 1</div>
+    <div class="content-box">Contenido 2</div>
+    <div class="content-box">Contenido 3</div>
+    <div class="content-box">Contenido 4</div>
+    <div class="content-box">Contenido 5</div>
+    <div class="content-box">Contenido 6</div>
+    <div class="content-box">Contenido 7</div>
+    <div class="content-box">Contenido 8</div>
+    <div class="content-box">Contenido 9</div>
+    <div class="content-box">Contenido 10</div>
+  </div>
+
+</body>
+</html>

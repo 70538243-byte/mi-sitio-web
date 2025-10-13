@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase Completa: Tipos de Position en CSS</title>
+  <!-- Cargamos Bootstrap para estilos rápidos y responsivos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html {
+      /* Suaviza el desplazamiento al hacer clic en enlaces ancla */
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f8f9fa; /* Color de fondo claro y neutro */
+    }
+
+    .contenedor {
+      border: 2px dashed #ccc;  /* Borde visual para identificar el contenedor */
+      padding: 20px;
+      margin-bottom: 50px;
+      position: relative;       /* Establece contexto para hijos con position: absolute */
+      height: 200px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .caja {
+      width: 160px;
+      height: 60px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 0.5rem;
+    }
+
+    .static {
+      position: static; /* Valor por defecto, sin posicionamiento especial */
+      background-color: #6c757d;
+    }
+
+    .relative {
+      position: relative; /* Se mueve respecto a su posición natural */
+      left: 30px;
+      top: 10px;
+    }
+
+    .absolute {
+      position: absolute; /* Se posiciona respecto al contenedor con position relativa */
+      left: 30px;
+      top: 10px;
+    }
+
+    .fixed {
+      position: fixed; /* Se mantiene fijo respecto al viewport (pantalla) */
+      bottom: 20px;
+      right: 20px;
+      background-color: #dc3545;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999; /* Asegura que esté encima de otros elementos */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+    .fixed:hover {
+      background-color: #b02a37;
+    }
+
+    .sticky-container {
+      height: 250px;
+      overflow-y: scroll;
+      border: 2px dashed #ccc;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .sticky {
+      position: sticky; /* Actúa como relative hasta que llega al tope indicado */
+      top: 0;
+      background-color: #20c997;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    code {
+      background: #eee;
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="p-4" id="top">
+
+  <h1 class="mb-4">🎯 Clase: Tipos de <code>position</code> en CSS</h1>
+
+  <p><strong>📌 ¿Para qué sirve la propiedad <code>position</code>?</strong></p>
+  <p>Define cómo y dónde se ubica un elemento dentro del flujo del documento o respecto a otros elementos. Los valores más comunes son: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code> y <code>sticky</code>.</p>
+
+  <hr>
+
+  <!-- STATIC -->
+  <h3>🔹 1. <code>position: static</code> (Valor por defecto)</h3>
+  <ul>
+    <li>El elemento se posiciona según el flujo normal del documento.</li>
+    <li>No responde a propiedades como <code>top</code>, <code>left</code>, etc.</li>
+  </ul>
+  <div class="contenedor">
+    <div class="caja static">static</div>
+  </div>
+
+  <!-- RELATIVE -->
+  <h3>🔸 2. <code>position: relative</code></h3>
+  <ul>
+    <li>El elemento conserva su espacio original, pero puede desplazarse desde ahí.</li>
+    <li>Sirve de referencia para elementos hijos con <code>absolute</code>.</li>
+  </ul>
+  <div class="contenedor">
+    <div class="caja relative">relative</div>
+  </div>
+
+  <!-- ABSOLUTE -->
+  <h3>🔸 3. <code>position: absolute</code></h3>
+  <ul>
+    <li>El elemento sale del flujo normal y se posiciona respecto al primer padre con <code>position</code> distinto de <code>static</code>.</li>
+  </ul>
+  <div class="contenedor">
+    <div class="caja absolute">absolute</div>
+  </div>
+
+  <!-- FIXED -->
+  <h3>🔸 4. <code>position: fixed</code></h3>
+  <p>El elemento queda fijado a una posición de la pantalla, sin importar el scroll. Muy útil para menús flotantes, botones de ayuda o "volver arriba".</p>
+
+  <!-- Espacio para hacer scroll y probar el fixed -->
+  <div style="height: 400px;">
+    <p class="text-muted">Haz scroll para ver cómo el botón rojo permanece visible.</p>
+  </div>
+
+  <!-- Botón fijo que permanece visible -->
+  <a href="#top" class="fixed shadow-lg">🔝 Volver arriba es fixed </a>
+
+  <!-- STICKY -->
+  <h3 class="mt-5">🔸 5. <code>position: sticky</code></h3>
+  <p>Funciona como <code>relative</code> mientras está en su lugar, pero cuando se hace scroll y alcanza el <code>top</code> definido, se comporta como <code>fixed</code>.</p>
+  <div class="sticky-container rounded">
+    <div class="sticky">Encabezado sticky</div>
+    <p>Contenido desplazable...</p>
+    <p>Más texto para scroll...</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Más contenido para demostrar el sticky.</p>
+    <p>Más contenido para demostrar el sticky.</p>
+    <p>Más contenido para demostrar el sticky.</p>
+    <p>Más contenido para demostrar el sticky.</p>
+  </div>
+
+  <!-- COMPARACIÓN FINAL -->
+  <h3 class="mt-5">🎓 Comparación rápida</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Tipo</th>
+          <th>¿En el flujo?</th>
+          <th>¿Movible con top/left?</th>
+          <th>¿Se fija al hacer scroll?</th>
+          <th>Referido a...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>static</code></td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>No aplica</td>
+        </tr>
+        <tr>
+          <td><code>relative</code></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>Su posición original</td>
+        </tr>
+        <tr>
+          <td><code>absolute</code></td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>Elemento padre posicionado</td>
+        </tr>
+        <tr>
+          <td><code>fixed</code></td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅ Siempre</td>
+          <td>Viewport (pantalla)</td>
+        </tr>
+        <tr>
+          <td><code>sticky</code></td>
+          <td>✅ (al inicio)</td>
+          <td>✅</td>
+          <td>✅ Al llegar al tope</td>
+          <td>Contenedor con scroll</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo Completo de calc() en CSS</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header fijo */
+  header {
+    height: 60px; /* altura fija */
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  /* Main usa calc() para calcular altura dinámica */
+  main {
+    /* Altura = altura de la ventana - altura del header */
+    height: calc(100vh - 60px);
+    background-color: #a8dadc;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Contenedor con ancho dinámico usando calc() */
+  .contenedor {
+    width: calc(100% - 40px); /* 100% ancho menos padding */
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  /* Caja combinando unidades */
+  .caja {
+    width: calc(50% - 10px); /* mitad del ancho menos 10px */
+    background-color: #f4a261;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  /* Texto con tamaño calculado */
+  p {
+    font-size: calc(14px + 0.5vw); /* tamaño base + porcentaje relativo a viewport */
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ejemplo Completo de calc()</h1>
+</header>
+
+<main>
+  <div class="contenedor">
+    <p><strong>Altura dinámica:</strong> El main usa <code>height: calc(100vh - 60px);</code> para ocupar toda la pantalla menos el header.</p>
+  </div>
+
+  <div class="contenedor">
+    <p><strong>Ancho dinámico:</strong> Este contenedor usa <code>width: calc(100% - 40px);</code> para adaptarse al ancho de la ventana menos el padding.</p>
+  </div>
+
+  <div class="contenedor">
+    <p><strong>Cajas con ancho calculado:</strong></p>
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+  </div>
+
+  <div class="contenedor">
+    <p><strong>Tamaño de fuente calculado:</strong> Este texto usa <code>font-size: calc(14px + 0.5vw);</code>, que se ajusta al tamaño de la ventana.</p>
+  </div>
+</main>
+
+</body>
+</html>
+
+
+
+<!--La función calc() permite hacer cálculos dinámicos dentro de CSS para valores de propiedades como ancho, alto, márgenes, paddings, posiciones, etc.
+
+
+
+Esto es muy útil porque puedes combinar unidades diferentes (por ejemplo %, px, em, rem, vh, vw, etc.) y hacer cálculos directamente en CSS sin usar JavaScript.-->
