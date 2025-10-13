@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Flexbox</title>
+  <link rel="stylesheet" href="04-flexbox.css">
+</head>
+<body>
+<style>
+  .contenedor {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightcoral;
+  padding: 20px;
+}
+
+.item {
+  background-color: white;
+  padding: 20px;
+  margin: 5px;
+  flex-basis: 100px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+</style>  
+
+  <h2>Flexbox</h2>
+  <div class="contenedor">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</body>
+</html>

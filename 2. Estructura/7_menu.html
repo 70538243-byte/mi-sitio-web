@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Header con CSS</title>
+  <style>
+    /* Estilo general del header */
+    header {
+      background-color: #333; /* Fondo oscuro */
+      color: white;           /* Texto en blanco */
+      padding: 15px 20px;     /* Espaciado interno */
+      display: flex;          /* Alinea elementos en fila */
+      justify-content: space-between; /* Separa título y menú */
+      align-items: center;    /* Centra verticalmente */
+    }
+
+    /* Estilo del título */
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    /* Navegación */
+    nav ul {
+      list-style: none; /* Quita viñetas */
+      margin: 0;
+      padding: 0;
+      display: flex; /* Alinea en fila */
+      gap: 20px;     /* Espacio entre enlaces */
+    }
+
+    nav ul li a {
+      text-decoration: none; /* Quita subrayado */
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s; /* Animación suave */
+    }
+
+    /* Efecto hover */
+    nav ul li a:hover {
+      color: #ffcc00; /* Amarillo al pasar el mouse */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Sitio Web</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>

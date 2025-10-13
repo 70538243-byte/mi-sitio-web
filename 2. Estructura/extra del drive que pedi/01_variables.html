@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Variables CSS</title>
+  <link rel="stylesheet" href="01-variables.css">
+</head>
+<body>
+
+  <style>
+    :root {
+  --color-fondo: #3498db;
+  --color-texto: #fff;
+}
+
+.caja {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+  </style>
+  <h2>Variables CSS</h2>
+  <div class="caja">Caja con variable aplicada</div>
+</body>
+</html>

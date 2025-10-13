@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Padding y Margin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      color: black;
+    }
+
+    /* Cuadrado básico */
+    .cuadrado {
+      background-color: lightblue;
+      width: 150px;
+      height: 150px;
+      margin: 20px auto;      /* Espacio FUERA del cuadrado */
+      padding: 20px;          /* Espacio DENTRO del cuadrado */
+      border: 5px solid blue; /* Línea alrededor */
+    }
+
+    /* Texto dentro del cuadrado */
+    .cuadrado p {
+      margin: 0;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo: Padding, Margin y Border</h2>
+  <p>
+    🔹 <b>Margin:</b> espacio por fuera del cuadrado.<br>
+    🔹 <b>Padding:</b> espacio entre el borde y el contenido.<br>
+    🔹 <b>Border:</b> la línea que rodea al cuadrado.
+  </p>
+
+  <!-- Cuadrado demostrativo -->
+  <div class="cuadrado">
+    <p>Contenido</p>
+  </div>
+</body>
+</html>

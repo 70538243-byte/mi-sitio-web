@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesión 02 - Estructura Básica con CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+  /* ==============================
+   VARIABLES CSS
+   ============================== */
+:root {
+  --main-bg-color: #1e90ff;
+  --main-text-color: #ffffff;
+  --secondary-color: coral;
+}
+
+.ejemplo-variables {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ==============================
+   SISTEMA DE COLORES
+   ============================== */
+.ejemplo-colores {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px;
+}
+
+/* ==============================
+   SELECTORES POR ID Y CLASE
+   ============================== */
+#unico {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.reutilizable {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.especial {
+  border: 2px solid blue;
+  text-decoration: underline;
+}
+
+/* ==============================
+   MODELO DE CAJA
+   ============================== */
+.caja {
+  background-color: lightyellow;
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid black;
+}
+
+/* ==============================
+   FLEXBOX
+   ============================== */
+.contenedor-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--secondary-color);
+  padding: 15px;
+}
+
+.item {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 5px;
+  flex-basis: 100px;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 6px;
+}
+
+</style>
+
+
+  <header>
+    <h1>Sesión 02: Estructura básica con CSS</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Variables CSS</h2>
+      <div class="ejemplo-variables">Soy un div con variables CSS</div>
+    </section>
+
+    <section>
+      <h2>Sistema de Colores</h2>
+      <div class="ejemplo-colores">Texto con color aplicado</div>
+    </section>
+
+    <section>
+      <h2>Selectores por ID y Clase</h2>
+      <div id="unico">Elemento con ID</div>
+      <div class="reutilizable">Elemento con Clase</div>
+      <div class="reutilizable especial">Elemento con varias Clases</div>
+    </section>
+
+    <section>
+      <h2>Modelo de Caja</h2>
+      <div class="caja">Caja con margin y padding</div>
+    </section>
+
+    <section>
+      <h2>Flexbox</h2>
+      <div class="contenedor-flex">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ejemplos de la Sesión 02 - Curso CSS</p>
+  </footer>
+</body>
+</html>

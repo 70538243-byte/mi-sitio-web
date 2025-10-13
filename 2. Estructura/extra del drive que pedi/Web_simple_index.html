@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <style>
+    /* === CONFIGURACIÓN GENERAL === */
+body {
+  margin: 0;                   /* Elimina el espacio exterior que agrega el navegador por defecto */
+  font-family: Arial, sans-serif; /* Define la tipografía */
+  min-height: 100vh;           /* Hace que el body mida como mínimo toda la altura de la pantalla */
+  display: flex;               /* Convierte al body en un contenedor flexible */
+  flex-direction: column;      /* Ordena los elementos hijos en columna (arriba a abajo) */
+}
+
+/* === ENCABEZADO (HEADER) === */
+header {
+  display: flex;               /* Convierte el header en contenedor flexible */
+  justify-content: space-between; /* Distribuye los elementos: uno a la izquierda, otro a la derecha */
+  align-items: center;         /* Alinea verticalmente al centro los elementos del header */
+  background: #333;            /* Color de fondo gris oscuro */
+  color: white;                /* Color de texto blanco */
+  padding: 10px 20px;          /* Espacio INTERNO: arriba/abajo 10px, izquierda/derecha 20px */
+}
+
+.logo {
+  font-weight: bold;           /* Pone el texto en negrita */
+  font-size: 1.2em;            /* Aumenta un poco el tamaño de fuente */
+}
+
+/* === MENÚ DE NAVEGACIÓN === */
+nav ul {
+  list-style: none;            /* Elimina las viñetas de la lista */
+  display: flex;               /* Muestra los <li> en línea en lugar de uno debajo del otro */
+  gap: 15px;                   /* Espacio entre cada <li> */
+  margin: 0;                   /* Elimina margen externo */
+  padding: 0;                  /* Elimina padding interno de la lista */
+}
+
+nav a {
+  color: white;                /* Enlaces en blanco */
+  text-decoration: none;       /* Quita el subrayado */
+}
+
+/* === CONTENIDO PRINCIPAL === */
+main {
+  flex: 1;                     /* Hace que el main crezca y ocupe todo el espacio disponible */
+  padding: 20px;               /* Espacio interior alrededor del contenido */
+}
+
+/* === PIE DE PÁGINA (FOOTER) === */
+footer {
+  background: #333;            /* Fondo gris oscuro */
+  color: white;                /* Texto blanco */
+  text-align: center;          /* Centra el texto horizontalmente */
+  padding: 10px;               /* Espacio interior */
+}
+
+  </style>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">Mi Sitio Web</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h2>Bienvenido</h2>
+    <p>Este es el contenido principal de la página.</p>
+
+    <section>
+      <h3>Servicios</h3>
+      <p>Ofrecemos soluciones digitales adaptadas a tus necesidades:</p>
+      <ul>
+        <li>Diseño web moderno y responsivo</li>
+        <li>Marketing digital y SEO</li>
+        <li>Soporte técnico y mantenimiento</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web</p>
+  </footer>
+
+</body>
+</html>

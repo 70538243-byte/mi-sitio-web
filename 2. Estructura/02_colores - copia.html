@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplos de Colores en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .caja {
+      padding: 15px;
+      margin: 10px 0;
+      color: white;
+      border-radius: 6px;
+    }
+
+    /* 1. Nombre de color */
+    .nombre {
+      background-color: red;
+    }
+
+    /* 2. HEX */
+    .hex {
+      background-color: #1e90ff; /* DodgerBlue */
+    }
+
+    /* 3. RGB */
+    .rgb {
+      background-color: rgb(0, 128, 0); /* verde */
+    }
+
+    /* 4. RGBA */
+    .rgba {
+      background-color: rgba(0, 0, 0, 0.5); /* negro 50% */
+    }
+
+    /* 5. HSL */
+    .hsl {
+      background-color: hsl(200, 100%, 50%); /* azul brillante */
+    }
+
+    /* 6. HSLA */
+    .hsla {
+      background-color: hsla(300, 100%, 50%, 0.6); /* fucsia semitransparente */
+    }
+
+    /* 7. Funciones modernas */
+    .color-fn {
+      background-color: color(srgb 0 1 0); /* verde en srgb */
+    }
+
+    .lab {
+      background-color: lab(70% -60 60); /* tono perceptual */
+    }
+
+    .lch {
+      background-color: lch(70% 80 40); /* variante perceptual */
+    }
+
+    /* 8. Gradiente */
+    .gradiente {
+      background: linear-gradient(to right, red, yellow);
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Colores en CSS</h1>
+
+  <div class="caja nombre">1. Nombre de color → red</div>
+  <div class="caja hex">2. HEX → #1e90ff</div>
+  <div class="caja rgb">3. RGB → rgb(0, 128, 0)</div>
+  <div class="caja rgba">4. RGBA → rgba(0,0,0,0.5)</div>
+  <div class="caja hsl">5. HSL → hsl(200,100%,50%)</div>
+  <div class="caja hsla">6. HSLA → hsla(300,100%,50%,0.6)</div>
+  <div class="caja color-fn">7a. color() → color(srgb 0 1 0)</div>
+  <div class="caja lab">7b. lab() → lab(70% -60 60)</div>
+  <div class="caja lch">7c. lch() → lch(70% 80 40)</div>
+  <div class="caja gradiente">8. Gradiente → linear-gradient(red, yellow)</div>
+</body>
+</html>

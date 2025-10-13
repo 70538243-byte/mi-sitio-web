@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .contenedor {
+      display: flex;
+      justify-content: center; /* centra en horizontal */
+      align-items: center;     /* centra en vertical */
+      height: 300px;
+      border: 2px dashed blue;
+      gap: 15px; /* espacio entre los items */
+    }
+
+    .item {
+      background: rgb(92, 111, 5);
+      padding: 20px;
+      border-radius: 6px;
+      border: 3px solid white; /* cada item con su propio borde */
+      color: white;
+    }
+
+    .item:nth-child(2) {
+      background: rgb(111, 5, 70);
+      border: 3px dotted yellow;
+    }
+
+    .item:nth-child(3) {
+      background: rgb(5, 90, 111);
+      border: 3px double orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>Alineamiento vertical con Flex y varios elementos</h1>
+  <div class="contenedor">
+    <div class="item">Elemento 1</div> <!--.item:nth-child(1)-->
+    <div class="item">Elemento 2</div> <!--.item:nth-child(2)-->
+    <div class="item">Elemento 3</div> <!--.item:nth-child(3)-->
+  </div>
+</body>
+</html>

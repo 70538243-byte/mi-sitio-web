@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diccionario Mejorado de HTML y CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      background: #f4f7fb;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      color: #1e88e5;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #1565c0;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    .note {
+      background: #e3f2fd;
+      border-left: 4px solid #1e88e5;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      color: #0d47a1;
+    }
+    .visual {
+      font-style: italic;
+      color: #444;
+      margin-top: 6px;
+    }
+    .color-sample {
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      margin-left: 10px;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 Diccionario Mejorado de HTML y CSS</h1>
+
+  <!-- Ancho -->
+  <section>
+    <h2>Ancho (<code>width</code>)</h2>
+    <p><strong>Definición:</strong> Propiedad CSS que define el ancho de un elemento (px, %, em, rem).</p>
+    <pre><code>.caja {
+  width: 50%;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Si usas %, dependerá del contenedor.</div>
+    <p class="visual">Visualización: un rectángulo que ocupa la mitad de la pantalla.</p>
+  </section>
+
+  <!-- Background-color -->
+  <section>
+    <h2>Background-color</h2>
+    <p><strong>Definición:</strong> Propiedad CSS que establece el color de fondo de un elemento.</p>
+    <pre><code>div {
+  background-color: tomato;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Se puede usar nombres, HEX, RGB o RGBA.</div>
+    <p class="visual">Visualización: caja con fondo rojo anaranjado.</p>
+  </section>
+
+  <!-- Border -->
+  <section>
+    <h2>Border</h2>
+    <p><strong>Definición:</strong> Borde que rodea un elemento. Configurable en grosor, estilo y color.</p>
+    <pre><code>.caja {
+  border: 3px dashed blue;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Útil para resaltar secciones o depuración.</div>
+    <p class="visual">Visualización: caja con borde azul punteado.</p>
+  </section>
+
+  <!-- Color -->
+  <section>
+    <h2>Color (propiedad)</h2>
+    <p><strong>Definición:</strong> Propiedad CSS que define el color del texto.</p>
+    <pre><code>p {
+  color: #ffffff;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> No confundir con <code>background-color</code>.</div>
+    <p class="visual">Visualización: texto blanco sobre fondo oscuro.</p>
+  </section>
+
+  <!-- Tipos de color -->
+  <section>
+    <h2>Tipos de color en CSS</h2>
+    <p><strong>Definición:</strong> Formas de representar colores en CSS.</p>
+    <ul>
+      <li><strong>Named colors (nombres):</strong> Ejemplo → <code>red</code> 
+        <span class="color-sample" style="background:red;"></span></li>
+      <li><strong>HEX:</strong> Ejemplo → <code>#1e90ff</code> 
+        <span class="color-sample" style="background:#1e90ff;"></span></li>
+      <li><strong>RGB:</strong> Ejemplo → <code>rgb(0, 255, 0)</code> 
+        <span class="color-sample" style="background:rgb(0,255,0);"></span></li>
+      <li><strong>RGBA:</strong> Ejemplo → <code>rgba(255, 0, 0, 0.5)</code> 
+        <span class="color-sample" style="background:rgba(255,0,0,0.5);"></span></li>
+      <li><strong>HSL:</strong> Ejemplo → <code>hsl(200, 100%, 50%)</code> 
+        <span class="color-sample" style="background:hsl(200,100%,50%);"></span></li>
+    </ul>
+    <div class="note"><strong>Nota práctica:</strong> Usar RGBA o HSLA permite trabajar con transparencia.</div>
+  </section>
+
+  <!-- Caja (Box Model) -->
+  <section>
+    <h2>Caja (Box Model)</h2>
+    <p><strong>Definición:</strong> Modelo que representa un elemento como caja con: contenido, padding, borde y margen.</p>
+    <pre><code>// Content → Padding → Border → Margin</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Controlar márgenes y rellenos es clave en diseños responsivos.</div>
+  </section>
+
+  <!-- Class -->
+  <section>
+    <h2>Class (atributo)</h2>
+    <p><strong>Definición:</strong> Atributo HTML que asigna uno o varios nombres de clase.</p>
+    <pre><code>&lt;div class="contenedor azul"&gt;&lt;/div&gt;</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> En CSS se usa con punto (.); un elemento puede tener varias clases.</div>
+  </section>
+
+  <!-- Display flex -->
+  <section>
+    <h2>Display: flex</h2>
+    <p><strong>Definición:</strong> Activa el modelo de diseño Flexbox.</p>
+    <pre><code>.contenedor {
+  display: flex;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Base de los diseños modernos y responsivos.</div>
+  </section>
+
+  <!-- Flex-direction -->
+  <section>
+    <h2>Flex-direction</h2>
+    <p><strong>Definición:</strong> Define la dirección del eje principal de un contenedor flex.</p>
+    <pre><code>.contenedor {
+  flex-direction: column;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Valores: row, column, row-reverse, column-reverse.</div>
+  </section>
+
+  <!-- Flex-grow -->
+  <section>
+    <h2>Flex-grow</h2>
+    <p><strong>Definición:</strong> Indica cuánto espacio extra ocupa un elemento flexible.</p>
+    <pre><code>.item {
+  flex-grow: 2;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Un valor mayor = más espacio que otros.</div>
+  </section>
+
+  <!-- Margin -->
+  <section>
+    <h2>Margin</h2>
+    <p><strong>Definición:</strong> Espacio externo alrededor de un elemento.</p>
+    <pre><code>.caja {
+  margin: 20px;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Se puede aplicar por lado: margin-top, margin-bottom...</div>
+  </section>
+
+  <!-- Padding -->
+  <section>
+    <h2>Padding</h2>
+    <p><strong>Definición:</strong> Espacio interno entre contenido y borde.</p>
+    <pre><code>.caja {
+  padding: 10px;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Mejora la legibilidad del contenido.</div>
+  </section>
+
+  <!-- Root -->
+  <section>
+    <h2>Root (<code>:root</code>)</h2>
+    <p><strong>Definición:</strong> Pseudo-clase que representa el elemento raíz del documento.</p>
+    <pre><code>:root {
+  --main-color: blue;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Ideal para variables globales.</div>
+  </section>
+
+  <!-- Selector de clase -->
+  <section>
+    <h2>Selector de clase</h2>
+    <p><strong>Definición:</strong> Aplica estilos a elementos con cierta clase.</p>
+    <pre><code>.azul {
+  color: steelblue;
+}</code></pre>
+    <p class="visual">Visualización: todos los textos con clase "azul" son azules.</p>
+  </section>
+
+  <!-- Selector de ID -->
+  <section>
+    <h2>Selector de ID</h2>
+    <p><strong>Definición:</strong> Aplica estilos a un único elemento con identificador único.</p>
+    <pre><code>#titulo {
+  font-size: 24px;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> No se debe repetir un ID en un documento.</div>
+  </section>
+
+  <!-- Selector universal -->
+  <section>
+    <h2>Selector universal</h2>
+    <p><strong>Definición:</strong> Aplica estilos a todos los elementos.</p>
+    <pre><code>* {
+  margin: 0;
+  padding: 0;
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Útil para resetear estilos.</div>
+  </section>
+
+  <!-- Variables CSS -->
+  <section>
+    <h2>Variables CSS (Custom Properties)</h2>
+    <p><strong>Definición:</strong> Propiedades personalizadas reutilizables.</p>
+    <pre><code>:root {
+  --blue: #1e90ff;
+}
+p {
+  color: var(--blue);
+}</code></pre>
+    <div class="note"><strong>Nota práctica:</strong> Facilitan consistencia y mantenimiento.</div>
+  </section>
+
+</body>
+</html>

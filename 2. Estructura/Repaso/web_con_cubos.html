@@ -1,0 +1,85 @@
+<!doctype html> <!-- HTML: Tipo de documento -->
+<html lang="es"> <!-- HTML: Raíz del documento -->
+<head> <!-- HTML: Encabezado con metadatos -->
+  <meta charset="utf-8" /> <!-- HTML: Configuración de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- HTML: Ajuste responsive -->
+  <title>Web Ordenada sin Espaciado</title> <!-- HTML: Título de la pestaña -->
+
+  <style>
+    /* CSS: Estilo general */
+    body {
+      margin: 0; /* CSS */
+      font-family: Arial, sans-serif; /* CSS */
+      background: #f5f5f5; /* CSS */
+    }
+
+
+
+    /* CSS: Contenedor principal con grid */
+    main {
+      display: grid; /* CSS */
+      grid-template-columns: 1fr 1fr; /* CSS */
+    }
+
+    /* CSS: Una sección larga que ocupa dos columnas */
+    .largo {
+      grid-column: span 2; /* CSS */
+      height: 300px; /* CSS */
+      background: #4caf50; /* CSS */
+      display: flex; /* CSS */
+      align-items: center; /* CSS */
+      justify-content: center; /* CSS */
+      color: #fff; /* CSS */
+      font-weight: bold; /* CSS */
+      font-size: 1.5em; /* CSS */
+    }
+
+    /* CSS: Sección normal celeste */
+    .seccion1 {
+      height: 150px; /* CSS */
+      background: #2196f3; /* CSS */
+      display: flex; /* CSS */
+      align-items: center; /* CSS */
+      justify-content: center; /* CSS */
+      color: #fff; /* CSS */
+      font-weight: bold; /* CSS */
+    }
+
+    /* CSS: Sección normal azul oscuro */
+    .seccion2 {
+      height: 150px; /* CSS */
+      background: #0925a5; /* CSS */
+      display: flex; /* CSS */
+      align-items: center; /* CSS */
+      justify-content: center; /* CSS */
+      color: #fff; /* CSS */
+      font-weight: bold; /* CSS */
+    }
+
+        /* CSS: Header y Footer */
+    header, footer {
+      background: #333; /* CSS */
+      color: #fff; /* CSS */
+      text-align: center; /* CSS */
+      padding: 10px; /* CSS */
+    }
+  </style>
+</head>
+
+<body> <!-- HTML: Cuerpo del documento -->
+  <header> <!-- HTML: Encabezado visible -->
+    <h1>Página Ordenada</h1> <!-- HTML: Título principal -->
+    <p>Header con línea arriba</p> <!-- HTML: Texto en header -->
+  </header>
+
+  <main> <!-- HTML: Contenido principal -->
+    <div class="seccion1">Sección 1</div> <!-- HTML: Caja con clase seccion1 -->
+    <div class="seccion2">Sección 2</div> <!-- HTML: Caja con clase seccion2 -->
+    <div class="largo">Sección Larga</div> <!-- HTML: Caja que ocupa dos columnas -->
+  </main>
+
+  <footer> <!-- HTML: Pie de página -->
+    <p>Footer con línea abajo</p> <!-- HTML -->
+  </footer>
+</body>
+</html>
