@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo: Sombras en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      padding: 20px;
+    }
+
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px solid #007bff;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .ejemplo {
+      width: 220px;
+      height: 130px;
+      background: #f9f9f9;
+      border: 2px solid #007bff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 10px;
+    }
+
+    /* 🔹 Variantes de box-shadow */
+    .suave { box-shadow: 4px 4px 12px rgba(0,0,0,0.3); }
+    .dura { box-shadow: 4px 4px 0px rgba(0,0,0,0.8); }
+    .interna { box-shadow: inset 0px 0px 15px rgba(0,0,0,0.6); }
+    .color { box-shadow: 6px 6px 15px rgba(0,123,255,0.7); }
+    .doble { box-shadow: 5px 5px 15px rgba(0,0,0,0.4), -5px -5px 15px rgba(0,123,255,0.4); }
+    .arriba { box-shadow: 0px -6px 12px rgba(0,0,0,0.4); }
+    .izquierda { box-shadow: -6px 0px 12px rgba(0,0,0,0.4); }
+    .derecha { box-shadow: 6px 0px 12px rgba(0,0,0,0.4); }
+
+    /* 🔹 Texto con sombras */
+    .texto-basico { 
+      font-size: 18px; 
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    }
+
+    .texto-color { 
+      font-size: 18px; 
+      color: #007bff; 
+      text-shadow: 2px 2px 5px rgba(255,0,0,0.7); 
+    }
+
+    .texto-neon { 
+      font-size: 18px; 
+      color: #0f0; 
+      text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; 
+    }
+
+    .texto-multiple { 
+      font-size: 18px; 
+      color: #000; 
+      text-shadow: 2px 2px 0px red, -2px -2px 0px blue; 
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Ejemplo: Sombras en CSS</h2>
+
+    <div class="contenedor">
+
+      <!-- Box-shadow -->
+      <div class="ejemplo suave"><b>Sombras suaves</b><br>(realistas)</div>
+      <div class="ejemplo dura"><b>Sombras duras</b><br>(sin difuminado)</div>
+      <div class="ejemplo interna"><b>Sombras internas</b><br>(inset)</div>
+      <div class="ejemplo color"><b>Sombras de color</b><br>(azul)</div>
+      <div class="ejemplo doble"><b>Sombras múltiples</b><br>(2 direcciones)</div>
+      <div class="ejemplo arriba"><b>Sombra arriba</b></div>
+      <div class="ejemplo izquierda"><b>Sombra izquierda</b></div>
+      <div class="ejemplo derecha"><b>Sombra derecha</b></div>
+
+      <!-- Text-shadow -->
+      <div class="ejemplo"><p class="texto-basico"><b>Texto con sombra</b></p></div>
+      <div class="ejemplo"><p class="texto-color"><b>Sombra de color</b></p></div>
+      <div class="ejemplo"><p class="texto-neon"><b>Efecto neón</b></p></div>
+      <div class="ejemplo"><p class="texto-multiple"><b>Sombra múltiple</b></p></div>
+
+    </div>
+  </section>
+
+</body>
+</html>

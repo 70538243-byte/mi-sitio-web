@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Bordes en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      padding: 20px;
+    }
+
+    section {
+      background: #fff;
+      padding: 20px;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .ejemplo {
+      margin-bottom: 15px;
+      padding: 12px;
+      background: #f9f9f9;
+    }
+
+    /* 🔹 Diferentes estilos de bordes */
+    .borde-none   { border: 3px none #333; }
+    .borde-solid  { border: 3px solid #28a745; }
+    .borde-dotted { border: 3px dotted #007bff; }
+    .borde-dashed { border: 3px dashed #ff9800; }
+    .borde-double { border: 6px double #e91e63; }
+    .borde-groove { border: 6px groove #6f42c1; }
+    .borde-ridge  { border: 6px ridge #17a2b8; }
+    .borde-inset  { border: 6px inset #795548; }
+    .borde-outset { border: 6px outset #9c27b0; }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Ejemplo: Todos los Estilos de Bordes en CSS</h2>
+
+    <div class="ejemplo borde-none">
+      <b>Borde none:</b> No se muestra ningún borde.
+    </div>
+
+    <div class="ejemplo borde-solid">
+      <b>Borde solid:</b> Línea verde continua alrededor del elemento.
+    </div>
+
+    <div class="ejemplo borde-dotted">
+      <b>Borde dotted:</b> Línea azul punteada (formada por puntos).
+    </div>
+
+    <div class="ejemplo borde-dashed">
+      <b>Borde dashed:</b> Línea naranja discontinua (rayas).
+    </div>
+
+    <div class="ejemplo borde-double">
+      <b>Borde double:</b> Línea rosa doble, con un espacio en medio.
+    </div>
+
+    <div class="ejemplo borde-groove">
+      <b>Borde groove:</b> Da un efecto 3D de “surco” en relieve.
+    </div>
+
+    <div class="ejemplo borde-ridge">
+      <b>Borde ridge:</b> Similar a groove, pero con efecto inverso.
+    </div>
+
+    <div class="ejemplo borde-inset">
+      <b>Borde inset:</b> Hace que el recuadro parezca hundido.
+    </div>
+
+    <div class="ejemplo borde-outset">
+      <b>Borde outset:</b> Hace que el recuadro parezca elevado.
+    </div>
+
+  </section>
+
+</body>
+</html>
