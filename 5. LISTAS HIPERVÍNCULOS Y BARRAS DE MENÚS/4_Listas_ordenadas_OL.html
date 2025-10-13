@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Ordenada con CSS</title>
+  <style>
+    /* Estilo general de la lista */
+    ol {
+      list-style-type: decimal; /* tipo de numeración (decimal, lower-roman, upper-alpha, etc.) */
+      padding-left: 30px;       /* sangría a la izquierda */
+      color: #2c3e50;           /* color del texto */
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+
+    /* Estilo de cada ítem */
+    ol li {
+      margin: 8px 0;           /* espacio entre elementos */
+      padding: 5px;
+      background: #f4f6f8;     /* color de fondo */
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    /* Efecto hover */
+    ol li:hover {
+      background: #dfe6e9;
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo de Lista Ordenada con CSS</h2>
+  <ol>
+    <li>Preparar ingredientes</li>
+    <li>Encender la cocina</li>
+    <li>Cocinar la receta</li>
+    <li>Servir el plato</li>
+  </ol>
+
+</body>
+</html>

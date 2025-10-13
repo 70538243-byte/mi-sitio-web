@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo One Page</title>
+    <style>
+        /* 
+        scroll-behavior: smooth → Activa el desplazamiento suave automático
+        cuando se hace clic en un enlace que apunta a un ID de la misma página.
+        */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: inline-block;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #f0a500;
+        }
+
+        section {
+            padding: 80px 20px 60px;
+            height: 100vh;
+        }
+
+        .bg-gray {
+            background-color: #f4f4f4;
+        }
+
+        .bg-blue {
+            background-color: #4c8bf5;
+            color: white;
+        }
+
+        .bg-green {
+            background-color: #3cb371;
+            color: white;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<!-- 
+    Sección destino del barrido suave activado por href="#inicio".
+    El navegador se desplazará suavemente hasta aquí cuando se haga clic en el enlace "Inicio".
+-->
+<section id="inicio" class="bg-blue">
+    <div class="content">
+        <h2>Bienvenidos a Nuestro Sitio Web</h2>
+        <p>Este es un ejemplo de una página de aterrizaje simple con navegación interna.</p>
+    </div>
+</section>
+
+<!-- 
+    Sección destino del barrido suave activado por href="#nosotros".
+    Esta sección tiene id="nosotros", lo que la convierte en el punto de llegada del scroll.
+-->
+<section id="nosotros" class="bg-gray">
+    <div class="content">
+        <h2>Nosotros</h2>
+        <p>Somos una empresa dedicada a ofrecer las mejores soluciones para tus necesidades digitales.</p>
+    </div>
+</section>
+
+<!-- 
+    Sección destino del barrido suave activado por href="#servicios".
+-->
+<section id="servicios" class="bg-green">
+    <div class="content">
+        <h2>Servicios</h2>
+        <p>Ofrecemos una variedad de servicios, desde desarrollo web hasta marketing digital.</p>
+    </div>
+</section>
+
+<!-- 
+    Sección destino del barrido suave activado por href="#contacto".
+-->
+<section id="contacto" class="bg-gray">
+    <div class="content">
+        <h2>Contacto</h2>
+        <p>Puedes contactarnos a través de nuestras redes sociales o por correo electrónico.</p>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+<!--Explicación clara:
+- El id="nosotros" es donde se genera el efecto del barrido, porque es el destino del enlace <a href="#nosotros">.
+
+- El navegador, al detectar el href="#nosotros", hace scroll hasta ese elemento.
+
+- El barrido suave se activa automáticamente por el CSS scroll-behavior: smooth.-->

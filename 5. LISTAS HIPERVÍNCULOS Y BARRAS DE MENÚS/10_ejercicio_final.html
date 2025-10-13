@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de HTML y CSS</title>
+  <!-- Librería de iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* 1. Reglas CSS a Hipervínculos */
+    a {
+      color: blue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* 2. Seudo-clase hover */
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* 5. Barra de menú con listas */
+    .menu {
+      list-style: none;      /* quitar viñetas */
+      margin: 0;             /* quitar márgenes */
+      padding: 0;            /* quitar padding */
+      display: flex;         /* menú horizontal */
+      gap: 20px;             /* espacio entre ítems */
+      background: #333;      /* fondo oscuro */
+      position: fixed;       /* siempre arriba */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .menu li {
+      margin: 0;             /* quitar espacio */
+    }
+    .menu a {
+      display: block;
+      padding: 15px 20px;    /* más clickeable */
+      color: white;
+      font-weight: normal;
+    }
+    .menu a:hover {
+      background: #444;
+      color: yellow;
+    }
+
+    /* 8. Scroll con animación */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Estilos extra */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 55px; /* espacio para el menú fijo */
+    }
+    section {
+      padding: 40px;
+      border-bottom: 1px solid #ccc;
+      min-height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 5. Barra de menús con íconos -->
+  <ul class="menu">
+    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+    <li><a href="#listas"><i class="fas fa-list"></i> Listas</a></li>
+    <li><a href="#anclas"><i class="fas fa-anchor"></i> Anclas</a></li>
+    <li><a href="#externo"><i class="fas fa-external-link-alt"></i> Externo</a></li>
+  </ul>
+
+  <!-- 6. Hipervínculos en la misma página -->
+  <section id="inicio">
+    <h2>Inicio</h2>
+    <p>Este es el inicio de la página. Usa el menú para moverte a las secciones.</p>
+  </section>
+
+  <!-- 3 y 4. Listas con viñetas y ordenadas -->
+  <section id="listas">
+    <h2>Listas</h2>
+    <h3>Lista con viñetas (ul):</h3>
+    <ul>
+      <li>Manzana</li>
+      <li>Plátano</li>
+      <li>Naranja</li>
+    </ul>
+
+    <h3>Lista ordenada (ol):</h3>
+    <ol>
+      <li>Inicio</li>
+      <li>Proceso</li>
+      <li>Fin</li>
+    </ol>
+  </section>
+
+  <!-- 6. Hipervínculos en la misma página + 8. scroll-behavior -->
+  <section id="anclas">
+    <h2>Hipervínculos en la misma página</h2>
+    <p><a href="#inicio">Volver al inicio</a></p>
+    <p><a href="#externo">Ir a la sección de vínculos externos</a></p>
+  </section>
+
+  <!-- 9. Vínculos a páginas externas -->
+  <section id="externo">
+    <h2>Vínculos externos</h2>
+    <p>Ejemplo de enlace a otra página:</p>
+    <p><a href="https://www.google.com" target="_blank">Ir a Google</a></p>
+  </section>
+
+</body>
+</html>

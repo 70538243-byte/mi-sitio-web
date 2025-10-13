@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hipervínculos en la Misma Página</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth; /* Scroll suave */
+    }
+    nav {
+      background: #2c3e50;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      height: 100vh; /* ocupa la pantalla completa */
+      padding: 20px;
+    }
+    #inicio { background: #ecf0f1; }
+    #productos { background: #e74c3c; color: white; }
+    #contacto { background: #2ecc71; color: white; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Inicio</h2>
+    <p>Bienvenido a la página.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <p>Aquí mostramos los productos.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Sección de contacto.</p>
+    <a href="#inicio" style="color: yellow;">Volver al inicio</a>
+  </section>
+
+</body>
+</html>
