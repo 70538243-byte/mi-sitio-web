@@ -1,0 +1,554 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #212121;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.top-links, .help-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.top-links li a, .help-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-links li a:hover, .help-links li a:hover {
+  color: #007b9a;
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.logo img {
+  height: 62px;
+}
+
+/* Botones - Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button_button__default__ylRnW {
+  background: #ffffff;
+  color: #323537;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border: 1px solid #c0ced6;
+  border-radius: 128px;
+  min-width: 56px;
+  height: 56px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.button_button__default__ylRnW:hover {
+  background-color: #f0f0f0;
+  border-color: #b0bfc9;
+}
+
+.btn-outline {
+  background: #5e6267;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  min-width: 172px;
+  height: 56px;
+  border-radius: 128px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #007b9a;
+}
+
+.btn-primary {
+  background: #3b9326;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  min-width: 172px;
+  height: 56px;
+  border-radius: 128px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #005f7a;
+}
+
+/* Menú Principal */
+nav {
+  background-color: #ffffff;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #8b929b;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu > li > a:hover {
+  color: #007b9a;
+}
+
+.submenu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.submenu li a {
+  padding: 12px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+  color: #007b9a;
+}
+
+.menu > li:hover .submenu {
+  display: block;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background-image: url('https://www.bancofalabella.pe/static/img/home-banner-2024.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  color: #3b9326;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+  background-color: #3b9326;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 32px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.hero-content .btn-primary:hover {
+  background-color: #005f7a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .submenu {
+    position: relative;
+    box-shadow: none;
+    background-color: #fafafa;
+    width: 100%;
+  }
+
+  .submenu li a {
+    padding-left: 30px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* Home Banner */
+.home-banner {
+  background-color: #f5f7f8;
+  padding: 40px 20px;
+}
+
+.home-banner__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.home-banner__text {
+  flex: 1;
+}
+
+.home-banner__text h1 {
+  font-size: 36px;
+  color: #3b9326;
+  margin-bottom: 20px;
+}
+
+.home-banner__text p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.home-banner__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home-banner__image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .home-banner__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-banner__image img {
+    max-width: 100%;
+  }
+}
+
+/* --- Contenedor principal del banner --- */
+.NewBannerHeroCarousel_container__78ROU {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.NewBannerHeroCarousel_wrapper__5UkFF {
+  position: relative;
+}
+
+/* --- Swiper básico --- */
+.swiper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  margin-right: 16px;
+  position: relative;
+}
+
+/* --- Wrapper de cada slide --- */
+.NewBannerHeroCarousel_wrapper-slide__YwBuo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Contenedor del banner (imagen + contenido) --- */
+.NewBannerHero_container__uad6K {
+  position: relative;
+  width: 100%;
+  max-width: 1344px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* --- Imagen de fondo --- */
+.NewBannerHero_wrapper-image__IXV1_ {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.NewBannerHero_image__h9Dd7 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  color: transparent;
+}
+
+/* --- Contenido del banner (texto + botón) --- */
+.NewBannerHero_content__nfPNo {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  color: white;
+  text-align: left;
+  max-width: 600px;
+}
+
+.NewBannerHero_content--left__ZsKtX {
+  margin-left: 2rem;
+}
+
+/* --- Título --- */
+.NewBannerHero_title__ySvJW {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Descripción --- */
+.NewBannerHero_description__xYosy {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Botón de acción --- */
+.NewBannerHero_actions__UYGr_ {
+  margin-top: 1rem;
+}
+
+.button_button__primary__UiNEQ {
+  background-color: #e60014;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button_button__primary__UiNEQ:hover {
+  background-color: #b3000f;
+}
+
+.button_button__sm__w_Nbt {
+  font-size: 0.875rem;
+}
+
+
+/* --- Contenedor principal del banner --- */
+.NewBannerHeroCarousel_container__78ROU {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.NewBannerHeroCarousel_wrapper__5UkFF {
+  position: relative;
+}
+
+/* --- Swiper básico --- */
+.swiper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  margin-right: 16px;
+  position: relative;
+}
+
+/* --- Wrapper de cada slide --- */
+.NewBannerHeroCarousel_wrapper-slide__YwBuo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Contenedor del banner (imagen + contenido) --- */
+.NewBannerHero_container__uad6K {
+  position: relative;
+  width: 100%;
+  max-width: 1344px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* --- Imagen de fondo --- */
+.NewBannerHero_wrapper-image__IXV1_ {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.NewBannerHero_image__h9Dd7 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  color: transparent;
+}
+
+/* --- Contenido del banner (texto + botón) --- */
+.NewBannerHero_content__nfPNo {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  color: white;
+  text-align: left;
+  max-width: 600px;
+}
+
+.NewBannerHero_content--left__ZsKtX {
+  margin-left: 2rem;
+}
+
+/* --- Título --- */
+.NewBannerHero_title__ySvJW {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Descripción --- */
+.NewBannerHero_description__xYosy {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Botón de acción --- */
+.NewBannerHero_actions__UYGr_ {
+  margin-top: 1rem;
+}
+
+.button_button__primary__UiNEQ {
+  background-color: #e60014;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button_button__primary__UiNEQ:hover {
+  background-color: #b3000f;
+}
+
+.button_button__sm__w_Nbt {
+  font-size: 0.875rem;
+}

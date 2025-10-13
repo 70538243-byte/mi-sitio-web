@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagen de fondo simple</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .fondo {
+      height: 100vh; /* ocupa toda la pantalla */
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200');
+      background-size: cover;   /* la imagen cubre todo */
+      background-position: center; /* centrada */
+      background-repeat: no-repeat; /* sin repetir */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="fondo">
+    Texto sobre la imagen de fondo
+  </div>
+</body>
+</html>

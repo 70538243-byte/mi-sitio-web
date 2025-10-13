@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Desplegable Moderno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    #header {
+      width: 100%;
+      background-color: #333;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav > li {
+      position: relative;
+    }
+
+    .nav li a {
+      display: block;
+      padding: 14px 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav li a:hover {
+      background-color: #555;
+    }
+
+    .nav li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      background-color: #444;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .nav li:hover > ul {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .nav li ul li {
+      position: relative;
+    }
+
+    .nav li ul li ul {
+      top: 0;
+      left: 100%;
+      border-radius: 0 6px 6px 6px;
+    }
+
+    .nav li ul li a {
+      padding: 12px 16px;
+      background-color: #555;
+    }
+
+    .nav li ul li a:hover {
+      background-color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Esta parte elimina cualquier punto de los submenús */
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Responsive (oculta el menú en pantallas pequeñas para usar con menú hamburguesa, si se desea) */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav > li {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav li ul {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+      }
+
+      .nav li ul li ul {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <ul class="nav">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a>
+        <ul>
+          <li><a href="#">Submenu1</a></li>
+          <li><a href="#">Submenu2</a></li>
+          <li><a href="#">Submenu3</a></li>
+          <li><a href="#">Submenu4</a>
+            <ul>
+              <li><a href="#">Submenu1</a></li>
+              <li><a href="#">Submenu2</a></li>
+              <li><a href="#">Submenu3</a></li>
+              <li><a href="#">Submenu4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Acerca de</a>
+        <ul>
+          <li><a href="#">Submenu1</a></li>
+          <li><a href="#">Submenu2</a></li>
+          <li><a href="#">Submenu3</a></li>
+          <li><a href="#">Submenu4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

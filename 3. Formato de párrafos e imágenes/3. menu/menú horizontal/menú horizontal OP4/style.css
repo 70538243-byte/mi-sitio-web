@@ -1,0 +1,52 @@
+/* Reset básico para eliminar espacios blancos */
+* {
+  margin: 0; /* Elimina los márgenes por defecto en todos los elementos */
+  padding: 0; /* Elimina el padding por defecto en todos los elementos */
+  box-sizing: border-box; /* Cambia el modelo de caja para que el ancho y alto incluyan bordes y padding */
+}
+
+html, body {
+  width: 100%; /* Establece el ancho de las etiquetas html y body al 100% del contenedor */
+  height: 100%; /* Establece la altura de las etiquetas html y body al 100% de la ventana del navegador */
+}
+
+/* Estilos para el encabezado */
+header {
+  background: rgba(0, 0, 0, 0.7); /* Aplica un fondo semitransparente negro (70% de opacidad) */
+  width: 100%; /* Establece el ancho del encabezado al 100% */
+  position: fixed; /* Fija el encabezado en la parte superior de la pantalla, incluso cuando se hace scroll */
+  z-index: 100; /* Define la capa en la que se ubica el encabezado, asegurando que quede encima de otros elementos */
+}
+
+/* Estilos del contenedor de navegación */
+nav {
+  float: left; /* Hace que el contenedor de navegación se alinee a la izquierda */
+}
+
+/* Lista principal del menú */
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista por defecto */
+  margin: 0; /* Elimina los márgenes de la lista */
+  padding: 0; /* Elimina el padding de la lista */
+  overflow: hidden; /* Evita que el contenido se desborde si los elementos flotan */
+}
+
+/* Elementos de la lista */
+nav ul li {
+  float: left; /* Hace que cada elemento de la lista se alinee horizontalmente */
+  font-family: Arial, Helvetica, sans-serif; /* Define la fuente de los elementos de la lista */
+  font-size: 20px; /* Establece el tamaño de la fuente en 20 píxeles */
+}
+
+/* Enlaces del menú */
+nav ul li a {
+  display: block; /* Hace que el enlace ocupe todo el espacio disponible en el elemento de lista */
+  padding: 20px; /* Aplica un padding de 20 píxeles alrededor del enlace */
+  color: #fff; /* Establece el color del texto en blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Efecto hover */
+nav ul li:hover {
+  background: #eca023; /* Aplica un fondo de color naranja cuando el usuario pasa el mouse por encima del elemento */
+}

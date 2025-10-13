@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.banner-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-hero__background img {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.banner-hero__overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: rgba(0, 150, 63, 0.95); /* verde institucional con transparencia */
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  z-index: 2;
+}
+
+.banner-hero__content {
+  color: white;
+}
+
+.banner-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.banner-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.banner-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: white;
+  color: #00963f;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,269 @@
+/* ------------------- RESET GENERAL ------------------- */
+/* Elimina márgenes y padding por defecto del navegador. 
+   Establece box-sizing en border-box para que width y height incluyan padding y border. 
+   Útil para controlar el tamaño real de los elementos. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Establece la tipografía base y el color de fondo y texto. 
+   Ideal usar sans-serif para una lectura moderna en pantalla. */
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+/* ------------------- TOP NAVIGATION ------------------- */
+/* Flexbox: distribuye los elementos horizontalmente, alineando cada grupo a los extremos (space-between). 
+   Útil para cabeceras con enlaces alineados a izquierda y derecha. */
+.top-nav {
+  display: flex; /* Convierte al contenedor en un flex container */
+  justify-content: space-between; /* Separa los hijos al máximo: uno a la izquierda y otro a la derecha */
+  background-color: #212121;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+/* Estilos para listas: las convierte en flexbox para poner los <li> en fila y separados con un espacio (gap).
+   Se elimina el estilo de lista predeterminado. */
+.top-links, .help-links {
+  display: flex;
+  list-style: none; /* Quita los bullets */
+  gap: 15px; /* Espacio horizontal entre los ítems */
+}
+
+/* Estilo visual para enlaces dentro de la navegación: color blanco, sin subrayado, con peso medio. */
+.top-links li a, .help-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Cambio de color al pasar el mouse: mejora experiencia del usuario. */
+.top-links li a:hover, .help-links li a:hover {
+  color: #007b9a;
+}
+
+
+/* ------------------- MAIN NAVIGATION ------------------- */
+/* Flex para alinear el logo y los botones de acción en una sola línea, centrados verticalmente. */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centrado vertical */
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+/* Imagen del logo con altura controlada para mantener proporciones. */
+.logo img {
+  height: 62px;
+}
+
+/* Flex para que los botones de acción estén alineados en fila con separación entre ellos. */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo base para botones redondos: fondo blanco, borde gris claro, centrado del contenido (íconos). */
+.button_button__default__ylRnW {
+  background: #ffffff;
+  border: 1px solid #c0ced6;
+  border-radius: 128px; /* Hace el botón redondo */
+  width: 56px;
+  height: 56px;
+  display: flex; /* Flex interno para centrar contenido */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s; /* Suaviza los cambios visuales */
+}
+
+/* Hover para mejorar interactividad visual. */
+.button_button__default__ylRnW:hover {
+  background-color: #f0f0f0;
+  border-color: #b0bfc9;
+}
+
+/* Botón secundario (gris): sin borde, padding uniforme y color blanco. */
+.btn-outline {
+  background: #5e6267;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 128px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #007b9a;
+}
+
+/* Botón principal (verde): usado para acciones clave. */
+.btn-primary {
+  background: #3b9326;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 128px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #005f7a;
+}
+
+
+/* ------------------- MENÚ PRINCIPAL ------------------- */
+/* Lista principal de navegación: horizontal, centrada, con espacios entre ítems. */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los ítems se acomoden en múltiples líneas en pantallas pequeñas */
+  padding: 10px 0;
+  gap: 10px;
+}
+
+/* Cada item del menú es relativo para poder posicionar submenús absolutamente respecto a él. */
+.menu > li {
+  position: relative;
+}
+
+/* Enlaces del menú: diseño simple, espaciado interno, fuente destacada. */
+.menu > li > a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #8b929b;
+  font-weight: 600;
+}
+
+.menu > li > a:hover {
+  color: #007b9a;
+}
+
+
+/* ------------------- SUBMENÚS ------------------- */
+/* Por defecto ocultos, aparecen solo cuando se pasa el mouse sobre el item padre. */
+.submenu {
+  list-style: none;
+  display: none;
+  position: absolute; /* Se posiciona respecto al <li> padre */
+  top: 100%; /* Justo debajo del padre */
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
+  border-radius: 4px;
+}
+
+/* Mostrar el submenú al hacer hover en el item principal */
+.menu > li:hover .submenu {
+  display: block;
+}
+
+/* Enlaces dentro del submenú: padding generoso para que sean clicables fácilmente. */
+.submenu li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+  color: #007b9a;
+}
+
+
+/* ------------------- BANNER PRINCIPAL ------------------- */
+/* Fondo con imagen, centrado, cubre todo, backup en color si no carga. 
+   Se usa flex para alinear verticalmente el contenido. */
+.custom-banner {
+  background-image: url('carrusel-home.webp');
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d9f2e5; /* Color de respaldo */
+  height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Contenedor del contenido del banner centrado y limitado a un ancho máximo. */
+.custom-banner__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Texto del banner: alineado a la izquierda y limitado en ancho. */
+.custom-banner__text {
+  color: #ffffff;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Título principal del banner: grande, en negrita, separado del párrafo. */
+.custom-banner__text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Párrafo del banner: fuente más grande para destacar. */
+.custom-banner__text p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Botón principal dentro del banner: visualmente llamativo. */
+.custom-banner__text .btn-primary {
+  background: #3b9326;
+  padding: 12px 30px;
+  border-radius: 32px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.custom-banner__text .btn-primary:hover {
+  background: #005f7a;
+}
+
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+/* Ajustes para pantallas pequeñas como móviles. 
+   Elimina altura fija del banner, centra el texto, reduce tipografía. */
+@media (max-width: 768px) {
+  .custom-banner {
+    height: auto;
+    padding: 40px 20px;
+    background-position: center top;
+  }
+
+  .custom-banner__text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .custom-banner__text h1 {
+    font-size: 32px;
+  }
+
+  .custom-banner__text p {
+    font-size: 16px;
+  }
+}

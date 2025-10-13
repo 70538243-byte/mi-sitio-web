@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Selectores anidados</title>
+  <style>
+    /* #parte1 p = todos los párrafos dentro del id "parte1" */
+    /* p > span = el span hijo directo de un párrafo */
+    /* h2 + p = el párrafo inmediatamente después de un h2 */
+    #parte1 p { 
+      color: blue; 
+    }
+    p > span { font-weight: bold; color: red; }
+    h2 + p { font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>Selectores anidados</h1>
+  <div id="parte1">
+    <h2>Capítulo 1</h2>
+    <p>Texto con <span>span</span> dentro.</p>
+    <p>Otro párrafo del capítulo.</p>
+  </div>
+</body>
+</html>
+
+<!--#parte1 p → párrafos dentro de un bloque con id="parte1".
+p > span → spans que están directamente dentro de un párrafo.
+h2 + p → el párrafo que sigue inmediatamente a un h2.-->

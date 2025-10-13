@@ -1,0 +1,234 @@
+/* Reset General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #212121;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.top-links, .help-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.top-links li a, .help-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-links li a:hover, .help-links li a:hover {
+  color: #007b9a;
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.logo img {
+  height: 62px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button_button__default__ylRnW {
+  background: #ffffff;
+  border: 1px solid #c0ced6;
+  border-radius: 128px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button_button__default__ylRnW:hover {
+  background-color: #f0f0f0;
+  border-color: #b0bfc9;
+}
+
+.btn-outline {
+  background: #5e6267;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 128px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #007b9a;
+}
+
+.btn-primary {
+  background: #3b9326;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 128px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #005f7a;
+}
+
+/* Menú Principal */
+nav {
+  background-color: #ffffff;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #8b929b;
+  font-weight: 600;
+}
+
+.menu > li > a:hover {
+  color: #007b9a;
+}
+
+/* Submenús */
+.submenu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.menu > li:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+  color: #007b9a;
+}
+
+/* Banner */
+.custom-banner {
+  background-image: url('carrusel-home.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d9f2e5; /* Backup si no carga imagen */
+  height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.custom-banner__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.custom-banner__text {
+  color: #ffffff;
+  max-width: 500px;
+  text-align: left;
+}
+
+.custom-banner__text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.custom-banner__text p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.custom-banner__text .btn-primary {
+  background: #3b9326;
+  padding: 12px 30px;
+  border-radius: 32px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.custom-banner__text .btn-primary:hover {
+  background: #005f7a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-banner {
+    height: auto;
+    padding: 40px 20px;
+    background-position: center top;
+  }
+
+  .custom-banner__text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .custom-banner__text h1 {
+    font-size: 32px;
+  }
+
+  .custom-banner__text p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,86 @@
+/* General page layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  padding: 40px 5%;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #00e1ff;
+}
+
+.footer-logo {
+  margin-top: 15px;
+  max-width: 1200px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+
+/* Descripción:
+
+  linea 24: grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); repeat(auto-fit, ...): 
+
+  crea tantas columnas como quepan en el espacio disponible.
+  minmax(180px, 1fr): cada columna tendrá al menos 180px, pero puede crecer según el espacio.
+  Resultado: diseño flexible y responsivo sin necesidad de media queries.*/
+
+
+
+
+ /* Descripción:
+ 
+  Linea 23: display: grid;
+
+  es un sistema para organizar elementos en filas y columnas dentro de un contenedor. Al usar display: grid;, puedes crear diseños más ordenados y flexibles, sin necesidad de usar floats o position.
+  Con grid, puedes definir el tamaño de las columnas, filas y el espacio entre ellos, permitiendo un diseño más controlado y adaptable.*/
