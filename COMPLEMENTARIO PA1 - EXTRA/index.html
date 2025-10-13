@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CelinePage - Mejorado</title>
+  <style>
+    /* ==========================
+       01. RESET BÁSICO
+    ========================== */
+* {
+  margin: 0;            /* Elimina todos los márgenes externos predeterminados */
+  padding: 0;           /* Elimina todos los rellenos internos predeterminados */
+  box-sizing: border-box; /* Incluye padding y borde dentro del width y height */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Fuente principal: Arial; si no, cualquier sans-serif */
+  line-height: 1.6;               /* Altura de línea 1.6 veces el tamaño de fuente */
+  color: #333;                     /* Color del texto: gris oscuro */
+}
+
+a {
+  text-decoration: none;  /* Quita subrayado de enlaces */
+  color: inherit;         /* Hereda el color del elemento padre */
+}
+
+    /* ==========================
+       02. HEADER & NAVBAR
+    ========================== */
+    header {
+  background-color: #fff;      /* Fondo blanco del header */
+  border-bottom: 1px solid #ddd; /* Línea gris clara debajo del header */
+  position: sticky;            /* Hace que el header quede fijo al hacer scroll */
+  top: 0;                      /* Ubicación fija en la parte superior */
+  z-index: 1000;               /* Asegura que el header esté encima de otros elementos */
+}
+
+.navbar {
+  display: flex;               /* Convierte el contenedor en un flexbox (fila) */
+  justify-content: space-between; /* Separa los elementos al máximo a los lados */
+  align-items: center;         /* Centra verticalmente los elementos */
+  padding: 15px 20px;          /* Espacio interno: 15px arriba/abajo, 20px izquierda/derecha */
+  max-width: 1200px;           /* Máximo ancho del navbar */
+  margin: auto;                /* Centra horizontalmente el navbar */
+}
+
+.navbar-brand {
+  font-size: 1.8rem;           /* Tamaño de fuente del logo o marca */
+  font-weight: bold;            /* Fuente en negrita */
+}
+
+.navbar-nav {
+  display: flex;               /* Items en fila */
+  list-style: none;            /* Quita los puntos de lista */
+  gap: 20px;                   /* Espacio de 20px entre cada enlace */
+}
+
+.navbar-nav li a {
+  padding: 5px 10px;           /* Espacio interno dentro de cada enlace */
+  transition: 0.3s;            /* Animación suave de 0.3s para cambios hover */
+}
+
+.navbar-nav li a:hover {
+  color: #ff6600;              /* Cambia el color del enlace al pasar el mouse */
+}
+
+/* ==========================
+   03. SHOWCASE
+========================== */
+.showcase {
+  position: relative;           /* Permite posicionar elementos absolutos dentro */
+  text-align: center;           /* Centra horizontalmente contenido inline */
+}
+
+.showcase img {
+  width: 100%;                  /* Imagen ocupa todo el ancho del contenedor */
+  display: block;               /* Evita espacio inferior debajo de la imagen */
+}
+
+.carousel-caption {
+  position: absolute;           /* Posiciona el texto relativo al contenedor .showcase */
+  bottom: 20%;                  /* Ubica el texto a 20% del fondo */
+  left: 50%;                    /* Centrado horizontal inicial */
+  transform: translateX(-50%);  /* Ajusta para centrar completamente el texto */
+  color: #fff;                  /* Texto blanco */
+}
+
+
+    /* ==========================
+       04. COLECCIÓN
+    ========================== */
+   .coleccion {
+  padding: 50px 20px;           /* Espacio interno: 50px arriba/abajo, 20px izquierda/derecha */
+  background-color: #f9f9f9;    /* Fondo gris muy claro */
+}
+
+.coleccion h2 {
+  text-align: center;           /* Centra el título horizontalmente */
+  margin-bottom: 15px;          /* Espacio debajo del título */
+  font-size: 2rem;              /* Tamaño de fuente grande */
+}
+
+.coleccion p {
+  text-align: center;           /* Centra el párrafo */
+  margin-bottom: 40px;          /* Espacio debajo del párrafo */
+  max-width: 800px;             /* Ancho máximo para que no se extienda demasiado */
+  margin-left: auto;            /* Centrado horizontal automático */
+  margin-right: auto;           /* Centrado horizontal automático */
+}
+
+.row-coleccion {
+  display: flex;                /* Organiza los productos en fila */
+  justify-content: center;      /* Centra los productos dentro del contenedor */
+  flex-wrap: wrap;              /* Permite que los productos bajen a la siguiente línea si no caben */
+  gap: 20px;                    /* Espacio entre cada producto */
+}
+
+.producto {
+  position: relative;           /* Permite posicionar elementos absolutos dentro (overlay) */
+  width: 300px;                 /* Ancho fijo de cada producto */
+  overflow: hidden;             /* Oculta cualquier contenido que sobresalga */
+  border-radius: 10px;          /* Bordes redondeados */
+}
+
+.producto img {
+  width: 100%;                  /* Imagen ocupa todo el ancho del contenedor */
+  display: block;               /* Evita espacio debajo de la imagen */
+  transition: transform 0.3s;   /* Animación suave al escalar la imagen */
+}
+
+.producto:hover img {
+  transform: scale(1.05);       /* Aumenta ligeramente la imagen al pasar el mouse */
+}
+
+.overlay {
+  position: absolute;           /* Posiciona el overlay sobre la imagen */
+  top: 0;                       /* Comienza desde la parte superior */
+  left: 0;                      /* Comienza desde la izquierda */
+  width: 100%;                  /* Ocupa todo el ancho del contenedor */
+  height: 100%;                 /* Ocupa toda la altura del contenedor */
+  background-color: rgba(0,0,0,0.5); /* Fondo negro semitransparente */
+  color: #fff;                  /* Texto blanco */
+  opacity: 0;                   /* Inicialmente invisible */
+  display: flex;                /* Flexbox para centrar contenido */
+  flex-direction: column;       /* Coloca elementos en columna */
+  justify-content: center;      /* Centra verticalmente */
+  align-items: center;          /* Centra horizontalmente */
+  transition: 0.3s;             /* Animación suave al aparecer */
+}
+
+.producto:hover .overlay {
+  opacity: 1;                   /* Muestra el overlay al pasar el mouse */
+}
+
+.overlay h5 {
+  margin-bottom: 10px;          /* Espacio debajo del título del overlay */
+  font-size: 1.2rem;            /* Tamaño de fuente del título */
+}
+
+.overlay a {
+  background-color: #ff6600;    /* Fondo naranja del botón */
+  color: #fff;                  /* Texto blanco */
+  padding: 8px 12px;            /* Espacio interno del botón */
+  border-radius: 5px;           /* Bordes redondeados del botón */
+}
+
+    /* ==========================
+       05. DETALLE
+    ========================== */
+    .detalle {
+  padding: 50px 20px;           /* Espacio interno: 50px arriba/abajo, 20px izquierda/derecha */
+  max-width: 1200px;            /* Ancho máximo del contenedor */
+  margin: auto;                 /* Centra horizontalmente el contenedor */
+}
+
+.detalle h2 {
+  text-align: center;           /* Centra el título horizontalmente */
+  margin-bottom: 20px;          /* Espacio debajo del título */
+  font-size: 2rem;              /* Tamaño grande para el título */
+}
+
+.detalle .intro {
+  text-align: center;           /* Centra el párrafo introductorio */
+  margin-bottom: 40px;          /* Espacio debajo del párrafo */
+  max-width: 800px;             /* Ancho máximo para que no se extienda demasiado */
+  margin-left: auto;            /* Centrado horizontal automático */
+  margin-right: auto;           /* Centrado horizontal automático */
+}
+
+.detalle-item {
+  display: flex;                /* Flexbox para alinear imagen y texto en fila */
+  align-items: center;          /* Centra verticalmente los elementos */
+  gap: 20px;                    /* Espacio entre imagen y texto */
+  margin-bottom: 40px;          /* Espacio debajo de cada bloque de detalle */
+  flex-wrap: wrap;              /* Permite que los elementos bajen a la siguiente línea si no caben */
+}
+
+.detalle-item.reverse {
+  flex-direction: row-reverse;  /* Invierte la dirección de la fila (imagen a la derecha, texto a la izquierda) */
+}
+
+.detalle-img img {
+  width: 100%;                  /* Imagen ocupa todo el ancho del contenedor */
+  max-width: 500px;             /* Ancho máximo de la imagen */
+  border-radius: 10px;          /* Bordes redondeados */
+}
+
+.detalle-texto {
+  flex: 1;                      /* El texto ocupa el espacio disponible */
+}
+
+.detalle-texto h4 {
+  margin-bottom: 10px;          /* Espacio debajo del subtítulo */
+  font-size: 1.5rem;            /* Tamaño del subtítulo */
+}
+
+.detalle-texto p {
+  line-height: 1.5;             /* Altura de línea para mejor legibilidad */
+}
+
+    /* ==========================
+       06. NOSOTROS
+    ========================== */
+   .about {
+  padding: 50px 20px;           /* Espacio interno: 50px arriba/abajo, 20px izquierda/derecha */
+  background-color: #f9f9f9;    /* Fondo gris muy claro */
+}
+
+.about h2 {
+  text-align: center;           /* Centra el título horizontalmente */
+  margin-bottom: 30px;          /* Espacio debajo del título */
+  font-size: 2rem;              /* Tamaño grande para el título */
+}
+
+.about-item {
+  display: flex;                /* Flexbox para organizar imagen y texto en fila */
+  gap: 20px;                    /* Espacio entre imagen y texto */
+  flex-wrap: wrap;              /* Permite que los elementos bajen a la siguiente línea si no caben */
+  align-items: center;          /* Centra verticalmente los elementos */
+}
+
+.about-item img {
+  border-radius: 10px;          /* Bordes redondeados en la imagen */
+  max-width: 450px;             /* Ancho máximo de la imagen */
+  width: 100%;                  /* Imagen ocupa todo el ancho disponible del contenedor */
+}
+
+.about-item .text {
+  flex: 1;                      /* El texto ocupa todo el espacio disponible */
+}
+
+/* ==========================
+   07. FOOTER
+========================== */
+footer {
+  text-align: center;           /* Centra el texto horizontalmente */
+  padding: 20px;                /* Espacio interno alrededor del contenido del footer */
+  background-color: #222;       /* Fondo oscuro */
+  color: #fff;                  /* Texto blanco */
+}
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar container">
+      <div class="navbar-brand">CELINE</div>
+      <ul class="navbar-nav">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#coleccion">Colección</a></li>
+        <li><a href="#detalle">Diseño &amp; Detalles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SHOWCASE -->
+  <div class="showcase">
+    <img src="IMG/slider0.jpg" alt="Slider0">
+    <div class="carousel-caption container"></div>
+  </div>
+
+  <!-- COLECCIÓN -->
+  <section class="coleccion" id="coleccion">
+    <div class="container">
+      <h2>Colección</h2>
+      <p>Explora piezas únicas que fusionan elegancia natural y diseño atemporal. Cada prenda es una declaración de estilo y autenticidad.</p>
+      <div class="row-coleccion">
+        <div class="producto">
+          <img src="IMG/volantesOrange.jpg" alt="Vestido Aurora">
+          <div class="overlay">
+            <h5>Orange Flight</h5>
+            <a href="OrageFlight.html">Ver colección</a>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="IMG/minibolsonaranja.jpg" alt="Mini Bags">
+          <div class="overlay">
+            <h5>Mini Bags</h5>
+            <a href="OrageFlight.html">Ver colección</a>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="IMG/CambioShoes.jpg" alt="Orange Sandals">
+          <div class="overlay">
+            <h5>Orange Sandals</h5>
+            <a href="OrageFlight.html">Ver colección</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISEÑO Y DETALLE -->
+  <section class="detalle" id="detalle">
+    <div class="detalle-container">
+      <h2>Diseño y Detalle</h2>
+      <p class="intro">
+        En Celine, creemos que la verdadera elegancia se construye en los pequeños gestos.
+        Desde el primer boceto hasta la última puntada, cada prenda es el resultado de un proceso
+        consciente, artesanal y lleno de alma.
+      </p>
+      <div class="detalle-item">
+        <div class="detalle-img">
+          <img src="IMG/bocetos.jpg" alt="Proceso artesanal">
+        </div>
+        <div class="detalle-texto">
+          <h4>Inspiración que se transforma en diseño</h4>
+          <p>Nuestra creatividad nace de lo cotidiano, de lo natural, de lo femenino. Antes de ser prendas, nuestras ideas se dibujan a mano, como una extensión de lo que queremos transmitir: sutileza, fuerza y autenticidad.</p>
+        </div>
+      </div>
+      <div class="detalle-item reverse">
+        <div class="detalle-img">
+          <img src="IMG/proceso.jpg" alt="Taller artesanal">
+        </div>
+        <div class="detalle-texto">
+          <h4>Hecho con manos que aman lo que hacen</h4>
+          <p>Cada pieza es cuidadosamente elaborada por artesanas expertas. Seleccionamos telas suaves, naturales y nobles, que permiten que el diseño respire y se mueva contigo.</p>
+        </div>
+      </div>
+      <div class="detalle-item">
+        <div class="detalle-img">
+          <img src="IMG/mediciones.jpg" alt="Detalle de confección">
+        </div>
+        <div class="detalle-texto">
+          <h4>Los detalles no son menores: son esenciales</h4>
+          <p>Desde un botón forrado hasta una costura invisible, todo está pensado. Porque una prenda bien hecha no solo se ve, se siente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <h2>Nosotros</h2>
+      <div class="about-item" style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+        <img src="IMG/grupo.jpg" alt="Equipo Celine">
+        <div class="text">
+          <p>Celine nace del deseo de crear moda con alma, con propósito y con cuidado. Somos un equipo de mujeres apasionadas por el diseño, los detalles y la elegancia que se siente natural.</p>
+          <p>Desde nuestros inicios, hemos creído que la ropa debe acompañar y realzar, nunca disfrazar. Cada prenda que diseñamos es una extensión de nuestra esencia: fuerte, sutil, libre.</p>
+          <p>Creemos en el poder de lo hecho a mano, en la belleza de lo imperfecto y en el valor de lo que se hace con intención.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Todos los derechos reservados. Hecho para los alumnos de ISIL.</p>
+  </footer>
+</body>
+</html>
