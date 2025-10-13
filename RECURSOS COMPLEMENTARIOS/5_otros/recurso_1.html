@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección Bancaria</title>
+  <style>
+    /* ===== Estilos generales ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+
+    section {
+      max-width: 1200px;   /* ancho mayor */
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 28px;     
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* ===== Tarjetas ===== */
+    .cards {
+      display: flex;
+      justify-content: center; 
+      gap: 30px;               
+      flex-wrap: nowrap;       
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 250px;            
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 18px;  
+      color: #444;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Responsive: en móvil se apilan */
+    @media (max-width: 900px) {
+      .cards {
+        flex-wrap: wrap; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Haz todo desde tu App, Web o WhatsApp</h2>
+
+    <div class="cards">
+      <div class="card">
+        <a href="https://www.bancofalabella.pe/lp/envia-y-recibe-dinero/" target="_blank">
+          <img src="foto.jpg" alt="Envía y recibe Yape y PLIN">
+          <p>Envía y recibe Yape y PLIN</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=xe7YxipVe9I" target="_self">
+          <img src="foto.jpg" alt="Transfiere a todos los bancos">
+          <p>Transfiere a todos los bancos</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.bancofalabella.pe/autoadhesion/" target="_blank">
+          <img src="foto.jpg" alt="Cambia tu Clave Internet">
+          <p>Cambia tu Clave Internet</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=XEke7aEtboc" target="_self">
+          <img src="foto.jpg" alt="Pide tu CMR adicional 100% online">
+          <p>Pide tu CMR adicional 100% online</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

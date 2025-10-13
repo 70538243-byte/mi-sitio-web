@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección CMR Puntos</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Sección completa */
+    .section {
+      width: 100%;
+      background-color: white;
+      padding: 50px 0;
+    }
+
+    /* Contenedor central limitado */
+    .container {
+      max-width: 1200px; /* para que no sea demasiado largo */
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    /* Imagen */
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    /* Texto */
+    .text-box {
+      flex: 1;
+      background: #fff;
+      padding: 20px 30px;
+  
+    }
+
+    .text-box h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #333;
+      text-align: center;
+    }
+
+    .text-box p {
+      text-align: justify;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-box {
+        text-align: justify;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <!-- Imagen -->
+      <div class="image-box">
+        <img src="https://images.ctfassets.net/jsyhqx93uo07/63lf9x4WJJoBvyKCqMGMRA/6a022195d82b69c09fcbfe40d127d6f4/canjear_programa_cmr_puntos_promociones_online.jpg?fm=jpg&q=70" 
+             alt="canjear programa cmr puntos promociones online">
+      </div>
+      <!-- Texto -->
+      <div class="text-box">
+        <h3>¿Qué es CMR Puntos?</h3>
+        <p>
+          Es el Programa de beneficios del Grupo Falabella que te premia por preferirnos. 
+          Al tener una CMR o Débito Banco Falabella, ya eres automáticamente parte del Programa 
+          y cada vez que pagues con tus tarjetas acumulas CMR Puntos en todas tus compras y en 
+          nuestros comercios Falabella, Tottus, Precio Uno, Fazil, Linio, Sodimac, Maestro y en 
+          comercios aliados como Repsol. Luego podrás canjearlos en productos, experiencias y viajes.
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

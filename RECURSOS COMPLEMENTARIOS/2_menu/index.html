@@ -1,0 +1,179 @@
+<!DOCTYPE html>                          <!-- Declara el tipo de documento: HTML5 -->
+<html lang="es">                         <!-- Raíz del documento HTML, con idioma español -->
+
+<head>                                   <!-- Contiene metadatos e información del documento -->
+  <meta charset="UTF-8">                 <!-- Define la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la web sea adaptable a pantallas móviles -->
+  <title>Menú Banco Falabella</title>   <!-- Título de la pestaña del navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Enlaza con la hoja de estilos externa -->
+</head>
+
+<body>  
+
+
+
+
+<style>
+  * {
+  margin: 0; /* Elimina márgenes por defecto de todos los elementos */
+  padding: 0; /* Elimina el padding por defecto */
+  box-sizing: border-box; /* Incluye padding y border dentro del tamaño total del elemento */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente legible y moderna */
+  background-color: #f9f9f9; /* Fondo claro */
+  color: #333; /* Texto en gris oscuro */
+}
+
+.nav-container {
+  max-width: 1200px; /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra el contenido */
+  display: flex; /* Usamos Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Distribuye espacio entre elementos */
+  padding: 15px 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-bottom: 1px solid #e0e0e0; /* Borde sutil */
+  position: relative; /* Necesario para posicionar elementos internos */
+  z-index: 999; /* Se asegura que esté por encima de otros elementos */
+}
+
+.logo img {
+  height: 40px; /* Establece la altura del logo */
+}
+
+.menu {
+  list-style: none; /* Elimina viñetas de lista */
+  display: flex; /* Muestra elementos en línea */
+  gap: 10px; /* Espacio entre elementos */
+}
+
+.menu > li {
+  position: relative; /* Necesario para el submenú */
+}
+
+.menu > li > a {
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  padding: 12px 16px; /* Espaciado alrededor del texto */
+  display: block; /* Hace que el enlace ocupe toda la línea */
+  font-weight: 600; /* Peso semi-negrita */
+  transition: color 0.3s ease; /* Transición de color */
+}
+
+.menu > li > a:hover {
+  color: #007b9a; /* Cambia color al pasar el mouse */
+}
+
+.submenu {
+  list-style: none; /* Elimina viñetas */
+  display: none; /* Oculta el submenú */
+  position: absolute; /* Lo posiciona debajo del ítem */
+  top: 100%; /* Alinea debajo del elemento principal */
+  left: 0; /* Alinea al borde izquierdo */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  min-width: 220px; /* Ancho mínimo */
+}
+
+.submenu li a {
+  padding: 12px 20px; /* Espaciado interno */
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: block; /* Ocupa toda la línea */
+  transition: background 0.3s ease; /* Transición de fondo */
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0; /* Fondo al hacer hover */
+  color: #007b9a; /* Cambia el color del texto */
+}
+
+.menu > li:hover .submenu {
+  display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea a la izquierda */
+  }
+
+  .menu {
+    flex-direction: column; /* Apila los ítems del menú */
+    width: 100%; /* Ocupa todo el ancho */
+  }
+
+  .menu > li > a {
+    padding: 10px 15px; /* Reduce padding en móviles */
+  }
+
+  .submenu {
+    position: relative; /* Submenú fluye con el contenido */
+    box-shadow: none; /* Elimina sombra */
+    background-color: #fafafa; /* Fondo claro en móviles */
+    width: 100%; /* Submenú ocupa todo el ancho */
+  }
+
+  .submenu li a {
+    padding-left: 30px; /* Añade sangría para el submenú */
+  }
+}
+
+</style>                                 <!-- Cuerpo del documento, contiene el contenido visible -->
+
+  <header>                                <!-- Encabezado de la página, usualmente incluye logo y navegación -->
+    <div class="nav-container">           <!-- Contenedor general para la navegación -->
+
+      <div class="logo">                  <!-- Contenedor específico para el logo -->
+        <a href="#">                      <!-- Enlace (no lleva a ningún lugar) -->
+          <img src="banco_falabella.svg" alt="Banco Falabella"> <!-- Imagen del logo con texto alternativo -->
+        </a>
+      </div>
+
+      <nav>                               <!-- Sección de navegación principal -->
+        <ul class="menu">                 <!-- Lista principal del menú de navegación -->
+          
+          <li><a href="#">Inicio</a></li>           <!-- Primer ítem del menú -->
+
+          <li><a href="#">Cuentas</a>               <!-- Segundo ítem del menú con submenú -->
+            <ul class="submenu">                    <!-- Submenú de "Cuentas" -->
+              <li><a href="#">Cuenta Ahorro</a></li>       <!-- Subítem 1 -->
+              <li><a href="#">Cuenta Corriente</a></li>    <!-- Subítem 2 -->
+              <li><a href="#">Cuenta Nómina</a></li>       <!-- Subítem 3 -->
+            </ul>
+          </li>
+
+          <li><a href="#">Tarjetas</a>              <!-- Tercer ítem con submenú -->
+            <ul class="submenu">                    <!-- Submenú de "Tarjetas" -->
+              <li><a href="#">Tarjetas de Crédito</a></li>  <!-- Subítem 1 -->
+              <li><a href="#">Tarjetas Débito</a></li>       <!-- Subítem 2 -->
+            </ul>
+          </li>
+
+          <li><a href="#">Préstamos</a>             <!-- Cuarto ítem con submenú -->
+            <ul class="submenu">                    <!-- Submenú de "Préstamos" -->
+              <li><a href="#">Préstamos Personales</a></li>     <!-- Subítem 1 -->
+              <li><a href="#">Préstamos Hipotecarios</a></li>   <!-- Subítem 2 -->
+            </ul>
+          </li>
+
+          <li><a href="#">Inversiones</a>           <!-- Quinto ítem con submenú -->
+            <ul class="submenu">                    <!-- Submenú de "Inversiones" -->
+              <li><a href="#">Fondos Mutuos</a></li>          <!-- Subítem 1 -->
+              <li><a href="#">Depósitos a Plazo</a></li>      <!-- Subítem 2 -->
+            </ul>
+          </li>
+
+          <li><a href="#">Promociones</a></li>      <!-- Ítem simple del menú -->
+          <li><a href="#">Contacto</a></li>         <!-- Ítem simple del menú -->
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+</body>
+</html>
