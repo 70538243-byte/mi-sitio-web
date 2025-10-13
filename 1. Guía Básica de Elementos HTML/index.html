@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Primera Web en ISIL con SEO</title>
+  <meta name="description" content="Ejemplo completo de HTML: encabezados, texto, listas, enlaces, imágenes, tablas, citas y etiquetas semánticas. Proyecto creado en ISIL.">
+  <meta name="keywords" content="HTML, SEO, desarrollo web, ejemplo, ISIL, listas, enlaces, imágenes, tablas, citas, etiquetas semánticas">
+  <meta name="author" content="Juan Pérez - www.juanweb.com.pe">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Guía Básica de Elementos HTML</h1>
+    <p><strong>Autor:</strong> Juan Pérez | <time datetime="2025-08-28">28 de agosto de 2025</time></p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="imagenes.html">Imágenes</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezados -->
+    <section>
+      <h2>Encabezados</h2>
+      <h1>Título principal (H1)</h1>
+      <h2>Subtítulo principal (H2)</h2>
+      <h3>Subtítulo del subtítulo (H3)</h3>
+      <h4>Detalles secundarios (H4)</h4>
+      <h5>Más detalles específicos (H5)</h5>
+      <h6>Detalle muy específico (H6)</h6>
+    </section>
+
+    <!-- Párrafos y texto con formato -->
+    <section>
+      <h2>Párrafos y Texto con Formato</h2>
+      <p>Mi experiencia en ISIL con los alumnos creando una web desde cero comenzó conociendo los elementos básicos de HTML.</p>
+      <p>
+        <i>Cursiva</i> | 
+        <em>Énfasis</em> | 
+        <b>Negrita</b> | 
+        <strong>Importante en negrita</strong> | 
+        <del>Eliminado</del> | 
+        <s>Tachado</s> | 
+        <mark>Resaltado</mark> | 
+        <u>Subrayado</u> | 
+        <code>Código en línea</code>
+      </p>
+    </section>
+
+    <!-- Listas -->
+    <section>
+      <h2>Listas</h2>
+      <h3>Lista ordenada</h3>
+      <ol>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+      </ol>
+
+      <h3>Lista desordenada</h3>
+      <ul>
+        <li>Calzado</li>
+        <li>Celulares</li>
+        <li>Botella</li>
+      </ul>
+    </section>
+
+    <!-- Enlaces -->
+    <section>
+      <h2>Enlaces</h2>
+      <p>
+        <a href="index.html">Inicio</a> | 
+        <a href="nosotros.html">Nosotros</a> | 
+        <a href="contacto.html">Contacto</a>
+      </p>
+      <p>
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Ir a Google</a>
+      </p>
+      <p>
+        <a href="mailto:edu.rebaza.ch@gmail.com">Enviar correo</a> | 
+        <a href="mailto:edu.rebaza.ch@gmail.com" title="Enviar correo a edu.rebaza.ch@gmail.com">Mandar correo</a>
+      </p>
+    </section>
+
+    <!-- Imágenes -->
+    <section>
+      <h2>Imágenes</h2>
+      <p>Ejemplo con diferentes rutas:</p>
+      <img src="tigre.jpg" alt="Tigre" width="200">
+      <img src="imagenes/tigre.jpg" alt="Tigre en carpeta 'imagenes'" width="150">
+      <img src="imagen/tigre.jpg" alt="Tigre en carpeta 'imagen'" width="150">
+    </section>
+
+    <!-- Saltos y separadores -->
+    <section>
+      <h2>Saltos y Separadores</h2>
+      <p>Línea 1<br>Línea 2</p>
+      <hr>
+      <p>Texto después de la línea horizontal</p>
+    </section>
+
+    <!-- Citas -->
+    <section>
+      <h2>Citas</h2>
+      <blockquote cite="https://es.wikipedia.org/wiki/HTML">
+        HTML (HyperText Markup Language) es el lenguaje de marcado predominante para la elaboración de páginas web.
+      </blockquote>
+      <p>Según el W3C: <q>HTML es la base de toda la web.</q></p>
+    </section>
+
+    <!-- Tablas -->
+    <section>
+      <h2>Tabla de Productos</h2>
+      <table border="1" cellpadding="8">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monitor 24"</td>
+            <td>$120</td>
+            <td>En stock</td>
+          </tr>
+          <tr>
+            <td>Teclado mecánico</td>
+            <td>$70</td>
+            <td>Agotado</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Elementos semánticos -->
+    <section>
+      <h2>Elementos Semánticos en HTML</h2>
+      <ul>
+        <li><code>&lt;header&gt;</code>: encabezado</li>
+        <li><code>&lt;nav&gt;</code>: navegación</li>
+        <li><code>&lt;main&gt;</code>: contenido principal</li>
+        <li><code>&lt;section&gt;</code>: secciones de contenido</li>
+        <li><code>&lt;footer&gt;</code>: pie de página</li>
+      </ul>
+    </section>
+
+    <!-- Comentarios -->
+    <section>
+      <h2>Comentarios</h2>
+      <!-- Esto es un comentario en HTML -->
+      <p>Los comentarios no son visibles en la página, solo en el código fuente.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; 2025 Juan Pérez | www.juanweb.com.pe</p>
+  </footer>
+
+</body>
+</html>
