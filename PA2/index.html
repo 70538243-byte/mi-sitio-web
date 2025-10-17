@@ -1,16 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avance_PA2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avance_PA2</title>
+  <meta name="author" content="Sweritel">
+  <meta name="keywords" content="avance, inicio, escuela, proyecto ejemplo, temas, html, web">
+  <meta name="description" content="Ejercicios de publicación, estructura, listas, posicionamiento, filtros, etc.">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>Avance del Proyecto de Aprendizaje 2</h1>
+
+  <header>
+    <h1 id="inicio">Avance del Proyecto de Aprendizaje 2</h1>
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
+  </header>
+
+  <section>
+    <h2>Contenido del Proyecto</h2>
+    <div class="radius-25">
+      <ul>
+        <li><a href="#publicacion">1. Publicación, Bordes, Sombras e Íconos</a></li>
+        <li><a href="#listas">2. Listas, Hipervínculos y Menús</a></li>
+        <li><a href="#posicionamiento">3. Posicionamiento y Transiciones CSS</a></li>
+        <li><a href="#contacto">4. Añadiendo Nuevas Páginas</a></li>
+      </ul>
+    </div>
+    <a href="#final" class="boton-final">Ir al final </a>
+  </section>
+
+  <section id="publicacion">
+    <h2>1. Publicación, Bordes, Sombras e Íconos Web</h2>
+    <div class="borde-double">
+      <ul>
+        <li><b>Dominio:</b> Es el <i>nombre único</i> de una página web (ejemplo: <code>www.miempresa.com</code>).</li>
+        <li><b>Hosting:</b> Es el <i>servidor</i> que almacena los archivos de tu sitio.</li>
+        <li><b>Publicación en Hosting:</b> Subir la web al servidor (por ejemplo, con cPanel).</li>
+        <li><b>Herramientas FTP:</b> Programas como <i>FileZilla</i> que transfieren archivos.</li>
+        <li><b>GitHub Pages:</b> Publica proyectos en la nube de forma gratuita.</li>
+        
+      </ul>
+    </div>
+
+    <h3>Íconos Web</h3>
+    <div class="contenedor">
+      <div><i class="fa-solid fa-house"></i><p><b>Font Awesome</b><br>Ícono de casa</p></div>
+      <div><i class="fa-solid fa-circle-user"></i><p><b>Font Awesome</b><br>Ícono de usuario</p></div>
+    </div>
+
+    <div class="interna">
+      <b>Sombras internas</b><br>(inset)
+    </div>
+  </section>
+
+  <section id="listas">
+    <h2>2. Listas, Hipervínculos y Barras de Menús</h2>
+    <a href="https://github.com/70538243-byte/mi-sitio-web/new/main/PA2" target="_blank">Ir a mi proyecto en GitHub</a>
+
+    <div class="contenedor-3">
+      <h3>Menú con Íconos</h3>
+      <ul>
+        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#contacto"><i class="fas fa-phone"></i> Contacto</a></li>
+      </ul>
+
+      <h3>Hipervínculo Externo</h3>
+      <p>Haz clic en el botón para abrir Google en una nueva pestaña:</p>
+      <a href="https://www.google.com" target="_blank">Ir a Google </a>
+    </div>
+  </section>
+
+  <section class="hipervinculo_aqui">
+    <h3>Hipervínculos Internos</h3>
+    <nav>
+      <a href="#publicacion">Publicación</a>
+      <a href="#listas">Listas y Menús</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </section>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <p>Aquí mostramos los productos.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Sección de contacto.</p>
+    <a href="#inicio" style="color: yellow;">Volver al inicio</a>
+  </section>
+
+  <footer id="pie-pagina">
+    <h2 id="final">¡Llegaste al final! </h2>
+    <div class="container">
+      <p>&copy; 2024 Avance_PA2. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

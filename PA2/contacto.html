@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contacto y ofertas con formulario accesible y diseño moderno.">
+  <meta name="author" content="Sweritel">
+  <meta name="keywords" content="contacto, ofertas, formulario, banco, crédito, ahorro">
+  <title>Contacto</title>
+  <link rel="icon" href="favicon.ico">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --violeta: #523178;
+      --violeta-oscuro: #3a2253;
+      --rosa: #e91e63;
+      --fondo: #f4f7f6;
+      --gris-texto: #333;
+      --gris-suave: #777;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--fondo);
+      color: var(--gris-texto);
+      line-height: 1.6;
+    }
+
+
+    nav {
+      background-color: var(--violeta);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul.menu {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul.menu li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    nav ul.menu li a:hover {
+      color: #ffd9f3;
+      border-bottom: 2px solid #ffd9f3;
+    }
+
+
+    main {
+      padding: 20px;
+    }
+
+
+    .contacto {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      color: var(--violeta);
+      font-size: 2em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .contacto p {
+      color: var(--gris-suave);
+      font-size: 1em;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--violeta);
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--rosa);
+      outline: none;
+      box-shadow: 0 0 6px rgba(233, 30, 99, 0.3);
+    }
+
+    button {
+      background-color: var(--violeta);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: var(--violeta-oscuro);
+      transform: translateY(-2px);
+    }
+
+
+    .ofertas-section {
+      background-color: #fefefe;
+      border-top: 1px solid #ededed;
+      padding: 100px 20px;
+    }
+
+    .ofertas-section h2 {
+      text-align: center;
+      color: var(--violeta);
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    .ofertas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    article.oferta-card {
+      background-color: #ffffff;
+      border: 1px solid #f0f0f0;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+      max-width: 350px;
+      flex: 1 1 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      overflow: hidden;
+    }
+
+    article.oferta-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border-color: var(--rosa);
+    }
+
+    .oferta-header {
+      background-color: var(--rosa);
+      color: #fff;
+      padding: 15px 0;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .oferta-body {
+      padding: 30px 20px;
+      color: #3d3d3d;
+    }
+
+    .oferta-monto {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: var(--rosa);
+      margin-bottom: 10px;
+    }
+
+    .oferta-tcea {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    .oferta-restriccion {
+      font-size: 0.8em;
+      color: #aaa;
+      margin-top: 12px;
+    }
+
+ 
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--violeta);
+      color: white;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 1024px) {
+      .ofertas-grid {
+        gap: 20px;
+      }
+      .contacto {
+        margin: 50px auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ofertas-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contacto {
+        padding: 20px;
+      }
+      .contacto h2 {
+        font-size: 1.6em;
+      }
+      nav ul.menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    
+    <section class="contacto">
+      <h2>Contáctanos</h2>
+      <p>Envíanos tus consultas o comentarios mediante el siguiente formulario:</p>
+
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    
+    <section class="ofertas-section">
+      <h2>Ofertas Destacadas</h2>
+      <div class="ofertas-grid">
+        <article class="oferta-card">
+          <div class="oferta-header">Crédito Personal</div>
+          <div class="oferta-body">
+            <div class="oferta-monto">12%</div>
+            <p>Tasa preferencial para nuevos clientes</p>
+            <div class="oferta-tcea">TCEA referencial: 14.2%</div>
+            <div class="oferta-restriccion">Aplican condiciones</div>
+          </div>
+        </article>
+
+        <article class="oferta-card">
+          <div class="oferta-header">Cuenta Ahorro</div>
+          <div class="oferta-body">
+            <div class="oferta-monto">5%</div>
+            <p>Interés anual por tus depósitos</p>
+            <div class="oferta-tcea">TCEA referencial: 5.2%</div>
+            <div class="oferta-restriccion">Válido hasta fin de mes</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Contacto | Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
+
